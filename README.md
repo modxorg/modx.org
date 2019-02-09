@@ -24,3 +24,6 @@ You'll need to add the following line to your local `hosts` file:
 ```
 
 The project is accessible via `https://local.modx.org` afterwards (a SSL warning will be shown).
+
+# Frontend development
+Please read the [README](public/assets/templates/web/README.md)
