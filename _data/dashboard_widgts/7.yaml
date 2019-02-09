@@ -5,5 +5,5 @@ type: file
 content: '[[++core_path]]components/updater/elements/widgets/updater.dashboardwidget.php'
 namespace: updater
 lexicon: 'updater:default'
-name_trans: updater.widget
-description_trans: updater.widget.desc
+name_trans: 'Update status'
+description_trans: '<strong>Versions information widget for your dashboard!</strong> This widget shows you if there is an update for the MODX core available <em>and</em> if there are package updates available for download or install.'

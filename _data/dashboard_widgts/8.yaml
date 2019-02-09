@@ -6,5 +6,5 @@ content: '[[++core_path]]components/quickstartbuttons/model/quickstartbuttons/da
 namespace: quickstartbuttons
 lexicon: 'quickstartbuttons:dashboards'
 size: full
-name_trans: quickstartbuttons.widget
-description_trans: quickstartbuttons.widget_desc
+name_trans: 'Quickstart Buttons'
+description_trans: 'The Quickstart Buttons widget'
