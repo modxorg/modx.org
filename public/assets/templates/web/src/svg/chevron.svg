@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <g id="Capa_1" transform="matrix(0.816044,0,0,0.816044,-38.1329,-9.5711)">
-        <path d="M139.179,73C139.179,72.143 138.75,71.179 138.107,70.536L88.179,20.607C87.536,19.964 86.571,19.536 85.714,19.536C84.857,19.536 83.893,19.964 83.25,20.607L77.893,25.964C77.25,26.607 76.821,27.571 76.821,28.429C76.821,29.286 77.25,30.25 77.893,30.893L120,73L77.893,115.107C77.25,115.75 76.821,116.714 76.821,117.571C76.821,118.536 77.25,119.393 77.893,120.036L83.25,125.393C83.893,126.036 84.857,126.464 85.714,126.464C86.571,126.464 87.536,126.036 88.179,125.393L138.107,75.464C138.75,74.821 139.179,73.857 139.179,73Z" style="fill:black;fill-rule:nonzero;"/>
-    </g>
-</svg>

@@ -114,7 +114,7 @@ $extra-class-sizes: (
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1280);
 $global-lineheight: 1.5;
 $lightest-gray: #f5f5f5;
 $light-gray: #e6e6e6;
@@ -124,7 +124,7 @@ $black: #222;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Rajdhani', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: $typogrid*2;
 $global-padding: $typogrid*2;
@@ -150,7 +150,7 @@ $breakpoints: (
   small: 0,
   medium: 640px,
   large: 1020px,
-  xlarge: 1200px,
+  xlarge: 1280px,
   //xxlarge: 1600px,
 );
 $print-breakpoint: large;
@@ -172,7 +172,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Rajdhani', $body-font-family;
 $header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

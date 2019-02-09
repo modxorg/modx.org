@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="193.9 294.8 199.9 62.1">
+  <linearGradient id="a" x1="82.8818" x2="75.47" y1="787.5103" y2="792.3366" gradientTransform="matrix(3 0 0 -3 0 2674.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#80c3e6"/>
+    <stop offset="1" stop-color="#3380c2"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M241.3 320.8l12.4-19.9h-29.9l-4.2 6.6z"/>
+  <path d="M219.6 307.5l2.2-3.4 19.5 16.7z" opacity=".15"/>
+  <linearGradient id="b" x1="84.177" x2="78.6364" y1="776.3555" y2="780.0144" gradientTransform="matrix(3 0 0 -3 0 2674.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#f38649"/>
+    <stop offset=".1849" stop-color="#f28147"/>
+    <stop offset=".4091" stop-color="#ef7242"/>
+    <stop offset=".6537" stop-color="#ea5a3a"/>
+    <stop offset=".911" stop-color="#e4382e"/>
+    <stop offset="1" stop-color="#e12a29"/>
+  </linearGradient>
+  <path fill="url(#b)" d="M247.8 356.9V327l-6.4-4.1-13.6 21.5z"/>
+  <path d="M227.8 344.4l3.4 2.1 10.2-23.6z" opacity=".15"/>
+  <linearGradient id="c" x1="65.9263" x2="76.526" y1="784.178" y2="790.8015" gradientTransform="matrix(3 0 0 -3 0 2674.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#42ab4a"/>
+    <stop offset="1" stop-color="#add155"/>
+  </linearGradient>
+  <path fill="url(#c)" d="M199.5 294.8v30l7.1 4.1 34.7-8.1z"/>
+  <linearGradient id="d" x1="68.25" x2="76.8645" y1="772.3372" y2="786.1234" gradientTransform="matrix(3 0 0 -3 0 2674.5)" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#42ab4a"/>
+    <stop offset="1" stop-color="#add155"/>
+  </linearGradient>
+  <path fill="url(#d)" d="M206.4 331.2l-12.5 19.5h30l17.5-27.8z"/>
+  <g>
+    <path d="M259.4 340h3.9l2-24.4h-4v-3.4h8.8l8 19.1c.5 1.3.7 2.3.7 2.3h.1s.2-1 .7-2.3l8-19.1h8.8v3.4h-4l2 24.4h3.9v3.5h-12V340h3.7l-1.4-18.7c0-1 .1-2.6.1-2.6h-.1s-.4 1.5-.7 2.4l-7.1 16.5H277l-7.1-16.5c-.4-.9-.7-2.4-.7-2.4h-.1s.2 1.6.1 2.6l-1.4 18.7h3.7v3.5h-12V340zM316.8 311.6c9 0 16 7 16 16 0 9.2-7 16.4-16 16.4s-16-7.2-16-16.4c0-9 7-16 16-16zm0 28.5c6.3 0 11.4-5.4 11.4-12.5 0-6.8-5.1-12.1-11.4-12.1s-11.5 5.2-11.5 12.1c0 7 5.2 12.5 11.5 12.5zM335.8 340h3.9v-24.4h-3.9v-3.4h13.3c2.6 0 4.5.1 6.6.8 5.9 1.9 9.8 7.3 9.8 14.9 0 7.6-3.7 12.9-9.8 14.8-2 .7-4.1.8-6.6.8h-13.3V340zm13.1-.2c2 0 3.7-.2 5.3-.8 4.2-1.5 6.8-5.5 6.8-11.2 0-5.8-2.6-9.8-6.7-11.3-1.7-.6-3.3-.7-5.3-.7h-4.8v24h4.7zM367.1 340h2.9l8-12.4-7.9-12.1h-2.9v-3.4h9.8v3.4h-2.3l5.2 8.2c.5.7.8 1.2.8 1.2h.1s.3-.6.7-1.2l5-8.2h-2.2v-3.4h9.5v3.4h-2.9l-8.1 12.5 7.9 12h3v3.5h-9.8V340h2.3l-5.2-8.2c-.5-.7-.8-1.3-.8-1.3h-.1s-.3.6-.7 1.3l-5 8.2h2.3v3.5h-9.6V340z"/>
+  </g>
+</svg>

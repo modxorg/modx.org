@@ -15,6 +15,7 @@
 
 // Foundation Feature Includes
 @include foundation-global-styles;
+// Foundation XY Grid, see https://foundation.zurb.com/sites/docs/xy-grid.html
 @include foundation-xy-grid-classes(
     // include only those you need...
     $base-grid: true,
@@ -26,7 +27,6 @@
     $vertical-grid: false,
     $frame-grid: false
 );
-@include foundation-typography;
 @include foundation-visibility-classes;
 @include foundation-flex-classes;
 
@@ -37,7 +37,7 @@
 @import 'buttons';
 
 // Components
-@import 'components/EXAMPLE';
+@import 'components/logo';
 
 // Overrides - should be loaded last
 @import 'print';

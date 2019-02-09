@@ -6,10 +6,17 @@ properties: 'a:0:{}'
 
 -----
 
-<header class="l-page-header">
-    [[Wayfinder?
-        &startId=`0`
-        &scheme=`abs`
-        &level=`2`
-    ]]
+<header class="l-page-header grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="medium-3 cell">
+            <a href="[[~[[++site_start]]]]" class="c-logo">
+                <img src="/assets/templates/web/src/svg/modx-logo.svg" width="100" class="c-logo__image">
+            </a>
+        </div>
+        <div class="medium-9 cell">
+            <ul>
+                [[- get resources for menu... ]]
+            </ul>
+        </div>
+    </div>
 </header>
