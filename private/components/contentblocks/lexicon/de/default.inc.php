@@ -181,7 +181,7 @@ $_lang['contentblocks.fieldtype.checkbox'] = "Checkbox-Optionen";
 $_lang['contentblocks.fieldtype.textfield'] = "Textfeld";
 $_lang['contentblocks.fieldtype.link'] = "Link";
 $_lang['contentblocks.fieldtype.textarea'] = "Mehrzeiliges Textfeld";
-$_lang['contentblocks.fieldtype.richtext'] = "Rich text";
+$_lang['contentblocks.fieldtype.richtext'] = "Formatierter Text (Rich Text)";
 $_lang['contentblocks.fieldtype.image'] = "Bild";
 $_lang['contentblocks.fieldoptions'] = "Feld-Optionen";
 $_lang['contentblocks.fieldoptions.description'] = "Wird nur für Auswahlfeldtypen verwendet. Definieren Sie verfügbare Werte nach dem Schema \"platzhalter_wert==Angezeigter Wert\", einen pro Zeile (\"Angezeigter Wert=platzhalter_wert\" wird ebenfalls unterstützt, wird aber in Version 2.0 entfernt). Wenn Sie ausschließlich einen Wert pro Zeile übergeben (wie z.B. \"foo\"), wird dieser sowohl zur Anzeige als auch als Wert des Platzhalters verwendet.";
@@ -190,15 +190,15 @@ $_lang['contentblocks.field_is_exposed.description'] = "Zeige Feld im Eingabeber
 $_lang['contentblocks.field_is_exposed.modal'] = "Zeige Feld-Einstellungen in einem modalen Fenster";
 $_lang['contentblocks.field_is_exposed.exposedassetting'] = "Zeige Feld als Einstellmöglichkeit im Eingabebereich";
 $_lang['contentblocks.field_is_exposed.exposedasfield'] = "Zeige Feld als normales Feld im Eingabebereich";
-$_lang['contentblocks.process_tags'] = "Process tags";
-$_lang['contentblocks.process_tags.description'] = "When enabled, tags in the input options will be processed with the MODX parser before being used.";
+$_lang['contentblocks.process_tags'] = "Tags verarbeiten";
+$_lang['contentblocks.process_tags.description'] = "Wenn aktiviert, werden Tags in den Eingabeoptionen mit dem MODX-Parser verarbeitet bevor sie verwendet werden.";
 
 $_lang['contentblocks.directory'] = 'Verzeichnis';
-$_lang['contentblocks.directory.description'] = 'A subfolder within the media source (whether overridden or using the ContentBlocks system setting) where files should be uploaded to.';
-$_lang['contentblocks.crops'] = 'Crops';
-$_lang['contentblocks.crops.description'] = 'A definition of crops to allow for the image. Each unique crop is separated by a pipe symbol (|) and contains a name, followed by a colon (:), and then comma-separated options. Each option has a name and a value. For example, this is a valid crops definition with some options: <code>small:width=200,height=200,aspect=1|medium:width=500,aspect=0.7|large:height=750</code>';
-$_lang['contentblocks.crop_directory'] = 'Crops Directory';
-$_lang['contentblocks.crop_directory.description'] = 'A subfolder within the media source (whether overridden or using the ContentBlocks system setting) that will contain crops created for images.';
+$_lang['contentblocks.directory.description'] = 'Ein Unterordner innerhalb der Medienquelle (entweder in der oben ausgewählten oder, wenn keine ausgewählt wurde, in der, die in der ContentBlocks-Systemeinstellung "contentblocks.image.source" festgelegt wurde) in dem Dateien hochgeladen werden sollen.';
+$_lang['contentblocks.crops'] = 'Ausschnitte';
+$_lang['contentblocks.crops.description'] = 'Eine Definition von erlaubten Ausschnitten für das Bild. Jeder einzelne Ausschnitt wird durch einen senkrechten Strich (|) getrennt und beinhaltet einen Namen, gefolgt von einem Doppelpunkt (:), und dann komma-separierten Optionen. Jede Option hat einen Namen und einen Wert. Zum Beispiel ist das eine valide Definition von Ausschnitten mit einigen Optionen: <code>small:width=200,height=200,aspect=1|medium:width=500,aspect=0.7|large:height=750</code>';
+$_lang['contentblocks.crop_directory'] = 'Ausschnitte-Verzeichnis';
+$_lang['contentblocks.crop_directory.description'] = 'Ein Unterordner innerhalb der Medienquelle (entweder in der oben ausgewählten oder, wenn keine ausgewählt wurde, in der, die in der ContentBlocks-Systemeinstellung "contentblocks.image.source" festgelegt wurde), welche generierte Ausschnitte von Bildern beinhalten wird. ';
 $_lang['contentblocks.open_crops_automatically'] = 'Open cropper automatically';
 $_lang['contentblocks.open_crops_automatically.description'] = 'When enabled, the cropper will be immediately opened after adding an image to the field.';
 $_lang['contentblocks.file_types'] = 'Erlaubte Dateiendungen';
@@ -373,7 +373,7 @@ $_lang['contentblocks.repeater.layout_style'] = "Layout-Stil";
 $_lang['contentblocks.repeater.layout_style.description'] = "Format for laying out a repeater (mini is similar to a table view)";
 $_lang['contentblocks.repeater.condensed'] = "Condensed";
 $_lang['contentblocks.repeater.mini'] = "Mini";
-$_lang['contentblocks.repeater.default'] = "Default";
+$_lang['contentblocks.repeater.default'] = "Standard";
 
 $_lang['contentblocks.richtext'] = "Formatierter Text (Rich Text)";
 $_lang['contentblocks.richtext.description'] = "Ein einfaches Rich-Text-Feld. Unterstützt sowohl TinyMCE als auch Redactor.";
@@ -461,7 +461,7 @@ $_lang['contentblocks.cropper.resize_original'] = 'Original';
 $_lang['contentblocks.cropper.resize_width'] = 'Change the output width of the cropped image. This may be restricted by the aspect ratio for the crop.';
 $_lang['contentblocks.cropper.resize_height'] = 'Change the output height of the cropped image. This may be restricted by the aspect ratio for the crop.';
 $_lang['contentblocks.cropper.aspect_ratio'] = 'Aspect Ratio';
-$_lang['contentblocks.cropper.aspect_ratio.free'] = 'Free'; // free aspect ratio means no restriction on the aspect
+$_lang['contentblocks.cropper.aspect_ratio.free'] = 'Freie Wahl'; // free aspect ratio means no restriction on the aspect
 $_lang['contentblocks.cropper.aspect_ratio.original'] = 'Original'; // Same aspect ratio as the original file
 $_lang['contentblocks.cropper.aspect_ratio.1_1'] = '1:1'; // square
 $_lang['contentblocks.cropper.aspect_ratio.4_3'] = '4:3';
@@ -470,11 +470,11 @@ $_lang['contentblocks.cropper.aspect_ratio.16_9'] = '16:9';
 $_lang['contentblocks.cropper.aspect_ratio.3_4'] = '3:4';
 $_lang['contentblocks.cropper.aspect_ratio.2_3'] = '2:3';
 $_lang['contentblocks.cropper.aspect_ratio.9_16'] = '9:16';
-$_lang['contentblocks.cropper.advanced'] = 'Advanced'; //advanced, or manual, crop options
+$_lang['contentblocks.cropper.advanced'] = 'Erweitert'; //advanced, or manual, crop options
 $_lang['contentblocks.cropper.advanced.x'] = 'Top left X';
 $_lang['contentblocks.cropper.advanced.y'] = 'Top left Y';
-$_lang['contentblocks.cropper.advanced.width'] = 'Width';
-$_lang['contentblocks.cropper.advanced.height'] = 'Height';
+$_lang['contentblocks.cropper.advanced.width'] = 'Breite';
+$_lang['contentblocks.cropper.advanced.height'] = 'Höhe';
 
 
 // Misc

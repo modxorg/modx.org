@@ -139,6 +139,7 @@ Ext.extend(ContentBlocksComponent.window.RepeaterField, MODx.Window, {
             description: _('contentblocks.' + input.getValue() + '_template.description') || undefined,
             allowBlank: true,
             anchor: '100%',
+            height: 75,
             grow: true,
             growMin: 75,
             growMax: 400,

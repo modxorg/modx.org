@@ -18,8 +18,8 @@
     "build:css": "node-sass --source-map dist/ --output-style compressed scss/contentblocks.scss dist/contentblocks.css",
     "watch": "parallelshell \"npm run watch:js\" \"npm run watch:css\"",
     "watch:js": "parallelshell \"npm run watch:js:main\" \"npm run watch:js:inputs\"",
-    "watch:js:main": "watch \"npm run build:js\" js",
-    "watch:js:inputs": "watch \"npm run build:js\" js/inputs/",
+    "watch:js:main": "watch \"npm run build:js:main\" js",
+    "watch:js:inputs": "watch \"npm run build:js:inputs\" js/inputs/",
     "watch:css": "watch \"npm run build:css\" scss"
   }
 }
