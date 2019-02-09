@@ -1,7 +1,7 @@
 id: 3
 parent_properties: ''
 input: image
-name: Bild
+name: Image
 description: ''
 sortorder: 2
 category: 1
