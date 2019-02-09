@@ -1,3 +1,0 @@
-key: locker.status_off_on_lock
-xtype: combo-boolean
-namespace: locker

@@ -1,3 +1,4 @@
 key: parser_class
-value: fastFieldParser
-area: system
+value: pdoParser
+namespace: pdotools
+area: pdotools_main

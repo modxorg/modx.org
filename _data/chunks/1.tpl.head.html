@@ -9,10 +9,8 @@ properties: 'a:0:{}'
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        
         <title>[[+seoPro.title:htmlspecial]]</title>
         [[*description:notempty=`<meta name="description" content="[[*description:htmlspecial]]">`]]
-        
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="[[++project.environment:is=`production`:then=`[[+seoTab.robotsTag:default=`noopd,noydir`]]`:else=`noindex, nofollow`]]">
         <meta name="application-name" content="[[++site_name:htmlspecial]]">
@@ -23,7 +21,20 @@ properties: 'a:0:{}'
         <meta property="og:site_name" content="[[++site_name:htmlspecial]]">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="[[++locale]]">
-
+        [[*image:notempty=`
+        <meta property="og:image" content="[[*image:pthumb=`w=1200&h=630&zc=c&f=jpg&q=80`]]">
+        <meta property="og:image:alt" content="[[*longtitle:htmlspecial]]">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        `]]
+        
+        <meta name="twitter:card" content="summary">
+        [[-<meta name="twitter:site" content="@">]]
+        <meta name="twitter:title" content="[[*longtitle:htmlspecial]]">
+        [[*description:notempty=`<meta name="twitter:description" content="[[*description:htmlspecial]]">`]]
+        <meta name="twitter:image" content="[[*image:pthumb=`w=1200&h=630&zc=c&f=jpg&q=80`]]">
+        
         [[- <meta name="google-site-verification" content=""> ]]
         [[-<link rel="canonical" href="[[!+page.canonical:default=`[[~[[*id]]? &scheme=`full`]]`]]">]]
         
@@ -50,6 +61,11 @@ properties: 'a:0:{}'
         <script defer src="[[checksumFile? &file=`[[++project.assets_url]]dist/main-modern.js`]]" type="module"></script>
         <script defer src="[[checksumFile? &file=`[[++project.assets_url]]dist/main-legacy.js`]]" nomodule></script>
         <script>
+            window.siteconfig = {
+                assets_url: '[[++project.assets_url]]',
+                assets_version: [[!++project.assets_version]]
+            };
+            
             [[- Google Analytics integration ]]
         [[-
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
