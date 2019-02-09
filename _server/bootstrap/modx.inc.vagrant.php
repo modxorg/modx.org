@@ -8,7 +8,7 @@ $database_user = 'vagrant';
 $database_password = 'vagrant';
 $database_connection_charset = 'utf8';
 $dbase = 'vagrant';
-$table_prefix = 'mod_';
+$table_prefix = 'modx_';
 $database_dsn = 'mysql:host=localhost;dbname=vagrant;charset=utf8';
 $config_options = array (
 );

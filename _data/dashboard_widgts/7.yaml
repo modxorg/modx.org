@@ -5,5 +5,5 @@ type: file
 content: '[[++core_path]]components/updater/elements/widgets/updater.dashboardwidget.php'
 namespace: updater
 lexicon: 'updater:default'
-name_trans: 'Update Status'
-description_trans: '<strong>Versionsanzeige im Dashboard</strong> Zeigt Ihnen verfügbare Updates für Ihr MODX-System und verfügbare Updates für installierte Extras an.'
+name_trans: updater.widget
+description_trans: updater.widget.desc
