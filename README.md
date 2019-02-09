@@ -25,5 +25,8 @@ You'll need to add the following line to your local `hosts` file:
 
 The project is accessible via `https://local.modx.org` afterwards (a SSL warning will be shown).
 
+# How to work with Gitify
+Running Gitify is done inside the vagrant box - so first you'll need to run `vagrant ssh` to connect into the VM. When pulling changes make sure to `Gitify build` in integrate the pulled changes into your local database. When you make changes locally you need to run `Gitify extract` which updates the files in the `_data` folder.
+
 # Frontend development
 Please read the [README](public/assets/templates/web/README.md)
