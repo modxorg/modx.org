@@ -1,0 +1,6 @@
+text: contexts
+parent: admin
+action: context
+description: contexts_desc
+menuindex: 3
+permissions: view_context

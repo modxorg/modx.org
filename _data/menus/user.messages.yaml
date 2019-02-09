@@ -1,0 +1,6 @@
+text: messages
+parent: user
+action: security/message
+description: messages_desc
+menuindex: 1
+permissions: messages

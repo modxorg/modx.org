@@ -1,0 +1,5 @@
+text: clientconfig
+parent: components
+action: home
+description: clientconfig.desc
+namespace: clientconfig

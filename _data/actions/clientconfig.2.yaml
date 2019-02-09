@@ -1,0 +1,4 @@
+id: 2
+namespace: clientconfig
+controller: index
+lang_topics: 'clientconfig:default'

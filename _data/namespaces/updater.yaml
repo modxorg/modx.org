@@ -1,0 +1,3 @@
+name: updater
+path: '{core_path}components/updater/'
+assets_path: '{assets_path}components/updater/'

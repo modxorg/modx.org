@@ -1,0 +1,29 @@
+id: 1
+templatename: Standard
+description: 'Standard Template im Projekt'
+properties: 'a:0:{}'
+
+-----
+
+<!doctype html>
+<html class="no-js [[*context_key]]" lang="[[++cultureKey]]">
+    [[$tpl.head]]
+    <body itemscope itemtype="http://schema.org/WebPage" id="top">
+        [[$tpl.page-start]]
+        <a href="#main" class="show-for-sr">Zum Hauptinhalt springen</a>
+        
+        <div class="l-page-wrapper">
+            [[$tpl.page-header]]
+        
+            <div class="l-page-content">
+                <main id="main">
+                    [[*content]]
+                </main>
+                [[$tpl.page-footer]]
+            </div>
+        
+        </div>
+        
+        [[$tpl.page-end]]
+    </body>
+</html>

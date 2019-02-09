@@ -1,0 +1,5 @@
+text: user
+parent: usernav
+icon: '<span id="user-avatar">{$userImage}</span> <span id="user-username">{$username}</span>'
+menuindex: 5
+permissions: menu_user

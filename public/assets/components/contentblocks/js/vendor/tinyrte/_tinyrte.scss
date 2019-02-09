@@ -1,0 +1,127 @@
+/**
+*
+*	Yellow Text
+*	========================================
+*	This is a pre-made theme for the Yellow
+*	text editor and it's not needed to run
+*	the plugin.
+*
+*/
+.tinyrte-container {
+  position: relative;
+}
+
+.tinyrte-has-focus .tinyrte-buttons {
+  height: 30px;
+  opacity: 1;
+}
+
+.tinyrte-iframe {
+  display: block;
+}
+
+/**
+*
+*	Buttons
+*	========================================
+*	This section styles the buttons and the
+*	button bar, that holds all the buttons.
+*
+*/
+.tinyrte-buttons {
+  background: #ddd;
+  border-radius: 5px 5px 0 0;
+
+  position: absolute;
+  left: 0px;
+  top: -30px;
+
+  width: auto;
+  overflow: hidden;
+
+  // Hide first
+  height: 0;
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  & > a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    font: 16px Georgia;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px #fff;
+    cursor: pointer;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .strikethrough {
+    text-decoration: line-through;
+  }
+  
+  .icon-sprite, .JustifyLeft, .JustifyCenter, .JustifyRight, .InsertUnorderedList, .InsertOrderedList, .image, .link, .unlink {
+    background: url('../img/tinyrte.png') no-repeat;
+  }
+  
+  .JustifyLeft,
+  .JustifyCenter,
+  .JustifyRight,
+  .InsertUnorderedList,
+  .InsertOrderedList,
+  .image,
+  .link,
+  .unlink {
+    margin-top: 9px;
+    text-indent: -99999em;
+  }
+  
+  .JustifyLeft {
+    background-position: 0 -276px;
+  }
+  
+  .JustifyCenter {
+    background-position: 0 -184px;
+  }
+  
+  .JustifyRight {
+    background-position: 0 -230px;
+  }
+  
+  .InsertUnorderedList {
+    background-position: 0 -138px;
+  }
+  
+  .InsertOrderedList {
+    background-position: 0 -46px;
+  }
+  
+  .image {
+    background-position: 0 -92px;
+  }
+  
+  .link {
+    background-position: 0 0;
+  }
+  
+  .unlink {
+    background-position: 0 -322px;
+  }
+}

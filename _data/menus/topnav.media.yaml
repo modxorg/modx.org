@@ -1,0 +1,5 @@
+text: media
+parent: topnav
+description: media_desc
+menuindex: 1
+permissions: file_manager

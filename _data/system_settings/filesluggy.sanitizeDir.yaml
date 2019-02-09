@@ -1,0 +1,5 @@
+key: filesluggy.sanitizeDir
+value: '1'
+xtype: combo-boolean
+namespace: filesluggy
+area: fs_type

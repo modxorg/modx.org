@@ -1,0 +1,4 @@
+id: 102
+template: 1
+name: policy_template_delete
+description: perm.policy_template_delete_desc

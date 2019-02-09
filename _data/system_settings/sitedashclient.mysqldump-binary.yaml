@@ -1,0 +1,4 @@
+key: sitedashclient.mysqldump_binary
+value: mysqldump
+namespace: sitedashclient
+area: executables

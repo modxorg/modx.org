@@ -1,0 +1,4 @@
+key: updater.cache_expires_core
+value: '86400'
+namespace: updater
+area: Cache

@@ -1,0 +1,4 @@
+key: filesluggy.charset_iconv
+value: US-ASCII//TRANSLIT
+namespace: filesluggy
+area: fs_encoding

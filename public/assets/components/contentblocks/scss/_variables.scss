@@ -1,0 +1,62 @@
+$lightGray: #f5f5f5;
+$lightGrayBorder: darken($lightGray, 16.5%); //cbcbcb
+$lightGrayHover: lighten($lightGray, 2%); //fafafa
+$mediumGray: #e5e5e5;
+$mediumGrayBorder: darken($mediumGray, 5%);
+$mediumGrayHover: lighten($mediumGray, 5%);
+$darkGray: #707070;
+$highlightBlue: #2d86b7;
+$destructiveRed: #a40f13;
+
+@mixin field-separator {
+  padding-bottom: 30px;
+  border-bottom: 1px dashed $lightGrayBorder;
+}
+
+@mixin subfield-separator {
+  padding-bottom: 15px;
+  border-bottom: 5px dotted $lightGray;
+}
+
+/* Re-usable mixins
+ * https://github.com/tonystar/float-label-css/blob/master/scss/_mixins.scss
+ */
+@mixin float-label-container {
+  display: block;
+  position: relative;
+}
+
+@mixin float-label {
+  label {
+    position: absolute;
+    left: 8px;
+    top: -1em;
+    cursor: text;
+    font-size: 75%;
+    opacity: 1;
+    transition: all .2s;
+    font-weight:normal;
+    @content;
+  }
+}
+
+@mixin float-label-input {
+  &::placeholder,
+  & input::placeholder {
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:placeholder-shown:not(:focus)::placeholder,
+  &.placeholder-shown:not(.focus) input::placeholder {
+    opacity: 0;
+  }
+}
+
+@mixin float-label-scaled {
+  &:placeholder-shown:not(:focus) + label,
+  &.placeholder-shown:not(.focus) + label {
+    font-size: 100%;
+    opacity: .5;
+    @content;
+  }
+}

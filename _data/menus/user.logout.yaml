@@ -1,0 +1,7 @@
+text: logout
+parent: user
+action: security/logout
+description: logout_desc
+menuindex: 2
+handler: 'MODx.logout(); return false;'
+permissions: logout

@@ -1,0 +1,101 @@
+.contentblocks-dropmenu-container {
+  display: inline-block;
+  position: relative;
+
+  .contentblocks-dropmenu-title {
+    padding: 0.5em 15px 13px 15px !important;
+
+    // Fancy navicon built with simple borders
+    &:before {
+      font-size: 16px; // Size of navicon
+      content: "";
+      position: absolute;
+      top: 1em;
+      left: 0.5em;
+      width: 1em;
+      height: 0.125em;
+      border-top: 0.375em double #707070;
+      border-bottom: 0.125em solid #707070;
+    }
+  }
+
+  &:hover, &:focus {
+    .contentblocks-dropmenu-title {
+      background-color: #e5e5e5;
+      border: 1px solid #CBCBCB;
+      border-bottom-color: transparent;
+    }
+    .contentblocks-dropmenu-items {
+      display: block;
+    }
+  }
+  .contentblocks-dropmenu-items {
+    display: none;
+    z-index: 14;
+
+    position: absolute;
+    top: 39px;
+    right: 0;
+    background: #e5e5e5;
+    border: 1px solid #CBCBCB;
+    border-top: none;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    width: 150px;
+
+    li.separator {
+      height: 2px;
+      background-color: darken(#e5e5e5, 5%);
+    }
+    li a {
+      display: block;
+      border: none;
+      line-height: 25px;
+
+      &:hover, &:focus {
+        background-color: lighten(#e5e5e5, 5%);
+      }
+    }
+  }
+
+  .modx_v23 & {
+    .contentblocks-dropmenu-items {
+      background-color: #FFF;
+      border: 1px solid #e4e4e4;
+      border-top: none;
+      -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+      box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+    }
+
+    li.separator {
+      height: 1px;
+      background-color: #e4e4e4;
+    }
+
+    li a {
+      color: #555;
+      line-height: 16px;
+      font: 400 12px "Helvetica Neue",Helvetica,Arial,Tahoma,sans-serif;
+
+      &:hover, &:focus {
+        background-color: #30759c;
+        color: #fff;
+      }
+    }
+
+    &:hover, &:focus {
+      .contentblocks-dropmenu-title {
+        background-color: #FFF;
+        border: 1px solid #e4e4e4;
+        border-bottom: none;
+        -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+        box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+        z-index: 15;
+      }
+      .contentblocks-dropmenu-items {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.button {
+    @include button;
+    width: auto;
+    font-weight: $global-weight-bold;
+    line-height: $typogrid * 2;
+
+    & + .button {
+        margin-left: rem(10);
+    }
+
+    // Sizes
+    @each $size, $value in map-remove($button-sizes, default) {
+        &.#{$size} {
+            //font-size: $value;
+        }
+    }
+
+    // full width buttons
+    &.fullwidth { @include button-expand; }
+
+    // Colors
+    @each $name, $styles in $button-styles {
+        &.#{$name} {
+            @include button-style(map-get($styles, 'background'), map-get($styles, 'background-hover'), map-get($styles, 'text-color'));
+        }
+    }
+
+    // Hollow style
+    &.outline {
+        @include button-hollow;
+        //@include button-hollow-style;
+        padding-top: 0.825em;
+        padding-bottom: 0.825em;
+        text-shadow: none;
+
+        @each $name, $styles in $button-styles {
+            &.#{$name} {
+                //@include button-hollow-style(map-get($styles, 'background'), map-get($styles, 'background-hollow-scale'));
+                border: $button-hollow-border-width solid map-get($styles, 'background');
+                color: map-get($styles, 'background');
+
+                &:hover, &:focus {
+                    color: map-get($styles, 'text-color');
+                    background-color: map-get($styles, 'background');
+                }
+            }
+        }
+
+        &.white {
+            @include button-hollow-style(#fff, -5%);
+            background-color: rgba(0,0,0,0);
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: rgba(0,0,0,0.15);
+            }
+        }
+    }
+
+
+    // Disabled style
+    &.disabled,
+    &[disabled] {
+        @include button-disabled;
+
+        @each $name, $styles in $button-styles {
+            &.#{$name} {
+                @include button-disabled(map-get($styles, 'background'));
+            }
+        }
+    }
+}

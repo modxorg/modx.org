@@ -1,0 +1,292 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# PhpStorm: set filetype to perl to enable syntax highlight (quite same as ruby)
+
+# include colors for output like Colors.red("text")
+require_relative "bootstrap/colors"
+
+# load project specific configuration
+require 'yaml'
+#current_dir    = File.dirname(File.expand_path(__FILE__))
+config_data    = YAML.load_file("_serverconfig/vagrant.config.yaml")
+$global = config_data['configuration'][config_data['configuration']['use']]
+
+# define the defaults unless they are not set in global yaml config
+$global['vm']['box']     ||= "ubuntu/xenial64"
+$global['vm']['memory']  ||= 4096
+$global['vm']['cpu']     ||= 2
+$global['ports']['web']  ||= 60000
+$global['ports']['ssh']  ||= 22000
+$global['ports']['mysql']  ||= 63306
+$global['ports']['livereload']  ||= 9092
+$global['ports']['mailhog']  ||= 8025
+$global['ips']['public'] ||= '192.168.60.1'
+$global['folders']['modx']['private']['host'] ||= 'private'
+$global['folders']['modx']['private']['guest'] ||= '/vagrant/private/'
+$global['folders']['modx']['public']['host'] ||= 'public'
+$global['folders']['modx']['public']['guest'] ||= '/vagrant/public/'
+$global['folders']['log']['host'] ||= 'private/logs'
+$global['folders']['log']['guest'] ||= '/vagrant/private/logs'
+$global['software']['php'] ||= '7.1'
+$global['software']['mysql']['mode'] ||= 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+$global['configuration']['key'] ||= 'modx'
+
+if !Vagrant.has_plugin?("vagrant-vbguest")
+    puts
+    puts "'vagrant-vbguest' should be used. Install it with"
+    puts "> vagrant plugin install vagrant-vbguest"
+    puts
+    exit
+end
+
+if !Vagrant.has_plugin?("vagrant-puppet-install")
+    puts
+    puts "'vagrant-puppet-install' should be used. Install it with"
+    puts "> vagrant plugin install vagrant-puppet-install"
+    puts
+    exit
+end
+
+Vagrant.configure(2) do |config|
+    ################################################################################################
+    # Locale setting to ensure all shells will run
+    ################################################################################################
+    ENV['LC_ALL']="en_US.UTF-8"
+
+    config.vm.box = $global['vm']['box']
+
+    ################################################################################################
+    # Use the plugin to make sure puppet is installed inside the box before provisioner runs
+    ################################################################################################
+    # config.puppet_install.puppet_version = :latest
+    config.puppet_install.puppet_version = "5.5.6"
+
+    ################################################################################################
+    # do not check for box updates, this will speed up start
+    ################################################################################################
+    config.vm.box_check_update = false
+
+    ################################################################################################
+    # name the vm. by using define, vagrant sets the hostname
+    ################################################################################################
+    config.vm.define $global['vm']['name']
+
+    # config.vm.hostname = $global['host']['name']
+
+    ################################################################################################
+    # Client IP in reserved namespace instead of ports
+    ################################################################################################
+    config.vm.network "private_network", ip: $global['ips']['public']
+
+    ################################################################################################
+    # Expose the box to the port in local network
+    ################################################################################################
+    config.vm.network "forwarded_port", guest: 80, host: $global['ports']['web'], host_ip: $global['ips']['public']
+
+    # Forward to port 80 automatically, if already assigned, choose another one.
+    config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: $global['ips']['public']
+
+    # Forward liver-reload port 9091 - DEPRECATED AS WE USE livereload on the host system now
+    # config.vm.network "forwarded_port", guest: $global['ports']['livereload'], host: $global['ports']['livereload'], auto_correct: false
+
+    # Forward the mailhog webinterface
+    config.vm.network "forwarded_port", guest: $global['ports']['mailhog'], host: $global['ports']['mailhog'], host_ip: $global['ips']['public']
+
+    # forward vms mysql to this port to enable easy access from the host
+    config.vm.network "forwarded_port", guest: 3306, host: $global['ports']['mysql'], auto_correct: true
+
+    ################################################################################################
+    # Use a custom ssh port to prevent collisions with other vagrant machines
+    ################################################################################################
+    config.vm.network :forwarded_port, guest: 22, host: $global['ports']['ssh'], id: 'ssh'
+
+    ################################################################################################
+    # Configure the VM "hardware"
+    ################################################################################################
+    config.vm.provider "virtualbox" do |v|
+        v.customize ["modifyvm", :id, "--memory", $global['vm']['memory']]
+        v.customize ["modifyvm", :id, "--cpus", $global['vm']['cpu']]
+        v.customize ["modifyvm", :id, "--uartmode1", "disconnected" ]   # get rid of ubuntu cloudimage logfile
+    end
+
+    ################################################################################################
+    # we sync the local public and private folder inside the virtual machine into /vagrant/[public|private] and make
+    # the web server access this
+    ################################################################################################
+#    config.vm.synced_folder $global['folders']['modx']['public']['host'],
+#        $global['folders']['modx']['public']['guest'],
+#        owner: "www-data",
+#        group: "www-data",
+#        mount_options: ["dmode=775,fmode=644"]
+
+#    config.vm.synced_folder $global['folders']['modx']['private']['host'],
+#        $global['folders']['modx']['private']['guest'],
+#        owner: "www-data",
+#        group: "www-data",
+#        mount_options: ["dmode=775,fmode=644"]
+
+    ################################################################################################
+    # we sync the apache web folder to the host folder _server/logs
+    ################################################################################################
+#    config.vm.synced_folder $global['folders']['log']['host'],
+#        $global['folders']['log']['guest'],
+#        owner: "www-data",
+#        group: "www-data",
+#        mount_options: ["dmode=775,fmode=644"]
+
+    ################################################################################################
+    # PROVISION
+    # everything needed for modx dev is installed here including restoring of a modx database right
+    # after the install. This is needed by gitify to successfully build the database. The gitify restore
+    # function cannot be used here, because it needs a running modx instance which we do not have at
+    # provisioning time.
+    ################################################################################################
+
+    # use a bootstrap script to make some initial steps, like downloading additional data
+    config.vm.provision "BOOTSTRAP",
+            type: "shell",
+            preserve_order: true,
+            path: "_server/bootstrap.sh",
+            args: [$global['folders']['modx']['private']['guest'],$global['configuration']['key'],$global['ports']['livereload'],$global['ports']['mailhog']]
+
+#    config.trigger.before :provision do |trigger|
+#        trigger.warn="Installing puppet stuff locally"
+#        trigger.run_remote={inline: "/bin/sh /vagrant/_server/puppet.sh"}
+#    end
+
+    config.vm.provision "PUPPINSTALL",
+            type: "shell",
+            preserve_order: true,
+            path: "_server/puppet.sh"
+
+    config.vm.provision "puppet" do |puppet|
+       puppet.facter = {
+            "fqdn" => $global['host']['name'],
+            "docroot" => '/vagrant',
+            "modx_private" => $global['folders']['modx']['private']['guest'],
+            "modx_public" => $global['folders']['modx']['public']['guest'],
+            "apache_log" => $global['folders']['log']['guest'],
+            "apache_mod" => $global['software']['apache']['additional_mod'],
+            "php_version" => $global['software']['php'],
+            "sql_mode" => $global['software']['mysql']['mode']
+       }
+       puppet.manifests_path = "_server/puppet/manifests/"
+       puppet.manifest_file = "modx.pp"
+       puppet.module_path = "_server/puppet/modules"
+       puppet.options = "" #--logdest #{$global'folders']['log']['guest']}/puppet.log"
+    end
+
+    ################################################################################################
+    # use a postinstall script to finish installation
+    ################################################################################################
+    config.vm.provision "POSTINSTALL",
+        type: "shell",
+        preserve_order: true,
+        path: "_server/postinstall.sh",
+        args: ['web', $global['host']['name']]
+
+    ################################################################################################
+    # custom script e.g. to start frontend workflows.
+    ################################################################################################
+    config.vm.provision "CUSTOM",
+        type: "shell",
+        preserve_order: true,
+        path: "_serverconfig/custom.sh",
+        args: [$global['folders']['modx']['public']['guest']]
+
+    ################################################################################################
+    # this seems to be needed to automatically start the webserver
+    ################################################################################################
+    config.vm.provision "APACHE_RESTART",
+        type: "shell",
+        preserve_order: true,
+        inline: "service apache2 restart",
+        run: "always"
+
+    ################################################################################################
+    # Make sure the full hostname is set
+    ################################################################################################
+    config.trigger.before :provision do |trigger|
+        trigger.run_remote = {inline: "echo #{$global['host']['name']} > /etc/hostname"}
+    end
+    config.trigger.after :up, :reload do |trigger|
+        trigger.run_remote = {inline: "echo #{$global['host']['name']} > /etc/hostname && hostname #{$global['host']['name']}"}
+    end
+
+    config.trigger.after :up do |trigger|
+        $text =         "-------------------------------------------------------------------\n"
+        $text = $text + "| MODX BOOTSTRAP v" + $global['version'] +"\n"
+        $text = $text + "| " + Colors.yellow("Release hint: " + $global['comment']) +"\n"
+        if ($global['warning'] != "")
+            $text = $text + "|"+"\n"
+            $text = $text +  "| " + Colors.blink(Colors.bg_red( Colors.white( $global['warning'] )))+"\n"
+        end
+        $text = $text +  "|"+"\n"
+        $text = $text +  "-------------------------------------------------------------------"+"\n"
+        $text = $text +  "| Add the following line to the start of the hosts file on your host"+"\n"
+        $text = $text +  "| machine (format is the same for MacOS, Windows and Linux):"+"\n"
+        $text = $text +  "|"+"\n"
+        $text = $text +  "|    " + $global['ips']['public'] + "    " + $global['host']['name']+"\n"
+        $text = $text +  "|------------------------------------------------------------------"+"\n"
+        $text = $text +  "| " + Colors.underline("Access your MODX installation with:")+"\n"
+        $text = $text +  "|                                                                   "+"\n"
+        $text = $text +  "|    "+Colors.bg_blue(Colors.white("http://#{$global['host']['name']}"))+"\n"
+        $text = $text +  "|    http://localhost:#{$global['ports']['web']}"+"\n"
+        $text = $text +  "|    http://#{$global['ips']['public']}:#{$global['ports']['web']}    "+"\n"
+        $text = $text +  "|    http://#{$global['host']['name']}:#{$global['ports']['web']}     "+"\n"
+        $text = $text +  "|      "+"\n"
+        $text = $text +  "|      "+"\n"
+        $text = $text +  "| " + Colors.underline("All emails sent by the box can be found at:")+"\n"
+        $text = $text +  "|    http://#{$global['host']['name']}:#{$global['ports']['mailhog']} "+"\n"
+        $text = $text +  "|      "+"\n"
+        $text = $text +  "| " + Colors.underline("To access the DB from your host use the following parameters: ")+"\n"
+        $text = $text +  "|    Connection Type: TCP/IP (no socket, no SSH needed)"+"\n"
+        $text = $text +  "|    Host: 127.0.0.1 "+"\n"
+        $text = $text +  "|    Port: #{$global['ports']['mysql']}"+"\n"
+        $text = $text +  "|    User: root"+"\n"
+        $text = $text +  "|    Password: (leave empty, important!)"+"\n"
+        $text = $text +  "|      "+"\n"
+        $text = $text +  "|------------------------------------------------------------------"+"\n"
+        trigger.info = $text;
+    end
+
+    ################################################################################################
+    # DESTROY
+    # after destroy we can safely delete contents of modx cache and apache log
+    ################################################################################################
+    config.trigger.before :destroy do |trigger|
+        trigger.warn = 'CLEANUP: cleaning up modx cache folder'
+        trigger.run_remote = {inline: "rm -rf #{$global['folders']['modx']['private']['guest']}/cache/*"}
+    end
+
+    config.trigger.before :destroy do |trigger|
+        trigger.warn = 'CLEANUP: cleaning apache log folder'
+        trigger.run_remote = {inline: "rm -rf #{$global['folders']['log']['guest']}/*"}
+    end
+
+    # all interactivity needs to be in the Vagrantfile, user input cannot be used in remote scripts!
+    # This does not work anymore with the builtin vagrant triggers
+#    def backupConfirm( trigger )
+#        puts Colors.bg_blue(Colors.black("\n\tDo you want to backup your MODX database now (on '#{trigger}')? [Y,n] \n"))
+#        confirm = STDIN.gets.chomp
+#        if ( confirm == "Y" || confirm=="" || confirm=="y")
+#            run_remote "sudo chmod a+x /vagrant/_server/backup.sh"
+#            run_remote "sudo /vagrant/_server/backup.sh #{trigger} #{$global['vm']['name']}"
+#        else
+#            puts Colors.yellow("\t==> no backup");
+#        end
+#    end
+
+    ################################################################################################
+    # HALT
+    # before destroy we will make a dump of the database
+    ################################################################################################
+    config.trigger.before :halt, :destroy do |trigger|
+        trigger.run_remote = {inline: "sudo chmod a+x /vagrant/_server/backup.sh"}
+    end
+    config.trigger.before :halt, :destroy do |trigger|
+        trigger.run_remote = {inline: "sudo /vagrant/_server/backup.sh #{trigger} #{$global['vm']['name']}"}
+    end
+
+end

@@ -1,0 +1,4 @@
+id: 3
+namespace: quickstartbuttons
+controller: controllers/index
+lang_topics: 'quickstartbuttons:default'

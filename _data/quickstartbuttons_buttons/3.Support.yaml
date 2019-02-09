@@ -1,0 +1,12 @@
+id: 3
+set: 2
+icon: 256
+icon_file: null
+text: Support
+description: 'E-Mail an den Support'
+action_props: ''
+handler: null
+link: 'mailto:support@seda.digital?subject=Support%20für%20[[++http_host:urlencode]]'
+ranking: 3
+iconcls: fa-question
+iconpath: ''

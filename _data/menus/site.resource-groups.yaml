@@ -1,0 +1,6 @@
+text: resource_groups
+parent: site
+action: security/resourcegroup
+description: resource_groups_desc
+menuindex: 7
+permissions: access_permissions

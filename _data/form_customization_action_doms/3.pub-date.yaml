@@ -1,0 +1,11 @@
+id: 124
+set: 3
+action: resource/create
+name: pub_date
+description: null
+container: modx-panel-resource
+rule: fieldVisible
+value: '0'
+constraint_class: modResource
+for_parent: 1
+rank: 5

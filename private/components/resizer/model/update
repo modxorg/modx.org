@@ -1,0 +1,29 @@
+#!/bin/bash
+
+php ~/Dropbox/html/composer.phar selfupdate
+php ~/Dropbox/html/composer.phar update
+
+rm -rf vendor/imagine/imagine/.git
+rm -rf vendor/imagine/imagine/docs
+rm -rf vendor/imagine/imagine/lib/Imagine/Filter/Advanced
+rm -rf vendor/imagine/imagine/lib/Imagine/Filter/Basic/WebOptimization.php
+rm -rf vendor/imagine/imagine/lib/Imagine/Image/Fill
+rm -rf vendor/imagine/imagine/lib/Imagine/Image/Histogram
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/CMYK/[C-J]*
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/CMYK/Uncoated*
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/CMYK/USWebCoated*
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/CMYK/Web*
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/RGB
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/Adobe/*.pdf
+rm -rf vendor/imagine/imagine/lib/Imagine/resources/color.org/*_no_black*
+rm -rf vendor/imagine/imagine/lib/Imagine/Test
+rm -rf vendor/imagine/imagine/tests
+rm -rf vendor/imagine/imagine/.travis.yml
+rm -rf vendor/imagine/imagine/phpunit.xml.dist
+rm -rf vendor/oo12/reductionist/.git
+find vendor -name '*.DS_Store' | xargs rm -f
+find vendor -name '*.gitignore' | xargs rm -f
+
+php ~/Dropbox/html/composer.phar dumpautoload -o
+find vendor -name 'composer.lock' | xargs rm -f
+find vendor -name 'installed.json' | xargs rm -f

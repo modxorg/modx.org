@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1.07122,0,0,1.07122,-3.56099,-0.34399)">
+        <g id="Oval-2" transform="matrix(2.10835,0,0,2.10835,7.8331,4.82998)">
+            <path d="M19.89,26.593C23.592,26.593 26.593,23.592 26.593,19.89C26.593,16.188 23.592,13.187 19.89,13.187C16.188,13.187 13.187,16.188 13.187,19.89C13.187,23.592 16.188,26.593 19.89,26.593ZM19.89,30.11C14.246,30.11 9.67,25.534 9.67,19.89C9.67,14.246 14.246,9.67 19.89,9.67C25.534,9.67 30.11,14.246 30.11,19.89C30.11,25.534 25.534,30.11 19.89,30.11Z" style="fill:black;fill-rule:nonzero;"/>
+        </g>
+        <g id="Oval-3" transform="matrix(2.10835,0,0,2.10835,7.8331,4.82998)">
+            <circle cx="30.769" cy="9.231" r="2.418" style="fill:black;"/>
+        </g>
+        <g id="Rectangle-6" transform="matrix(2.10835,0,0,2.10835,7.8331,4.82998)">
+            <path d="M11.429,3.516C7.059,3.516 3.516,7.059 3.516,11.429L3.516,28.571C3.516,32.941 7.059,36.484 11.429,36.484L28.571,36.484C32.941,36.484 36.484,32.941 36.484,28.571L36.484,11.429C36.484,7.059 32.941,3.516 28.571,3.516L11.429,3.516ZM11.429,0L28.571,0C34.883,0 40,5.117 40,11.429L40,28.571C40,34.883 34.883,40 28.571,40L11.429,40C5.117,40 0,34.883 0,28.571L0,11.429C0,5.117 5.117,0 11.429,0Z" style="fill:black;fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>

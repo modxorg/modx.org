@@ -1,0 +1,31 @@
+.contentblocks-field-chunk_selector-select {
+  overflow: hidden;
+  label {
+    float: left;
+    width: 30%;
+  }
+  select {
+    float: left;
+    width: 40%;
+  }
+}
+
+.contentblocks-field-chunk_selector-add-property, .contentblocks-field-chunk_selector-uncached {
+  overflow: hidden;
+  padding-top: 3px;
+
+  label {
+    float: left;
+    width: 30%;
+  }
+  select {
+    float: left;
+    width: 40%;
+  }
+}
+
+.contentblocks-field-chunk .chunkOutput {
+  img, object, embed, iframe, div {
+    max-width: 100%;
+  }
+}

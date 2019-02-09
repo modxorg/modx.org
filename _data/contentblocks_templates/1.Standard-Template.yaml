@@ -1,0 +1,7 @@
+id: 1
+name: 'Standard Template'
+description: ''
+category: 1
+icon: heading
+content: '[{"layout":1,"content":{"cell1":[{"value":"[[*longtitle]]","level":"h1","field":1,"settings":{}},{"value":"","field":2,"settings":{}}]},"settings":{},"parent":0,"title":""}]'
+availability: '[{"field":"resource","value":"-1"}]'

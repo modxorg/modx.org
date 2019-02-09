@@ -1,0 +1,4 @@
+key: fe_editor_lang
+value: de
+xtype: modx-combo-language
+area: language

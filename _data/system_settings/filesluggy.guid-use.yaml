@@ -1,0 +1,5 @@
+key: filesluggy.guid_use
+value: '0'
+xtype: combo-boolean
+namespace: filesluggy
+area: fs_guid

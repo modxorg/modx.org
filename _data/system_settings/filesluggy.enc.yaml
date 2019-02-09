@@ -1,0 +1,5 @@
+key: filesluggy.enc
+value: UTF-8
+xtype: modx-combo-charset
+namespace: filesluggy
+area: fs_encoding

@@ -1,0 +1,13 @@
+id: 2
+parent_properties: ''
+input: richtext
+name: Text
+description: 'Ein Textfeld mit verschiedenen Möglichkeiten zur Formatierung'
+sortorder: 1
+category: 1
+icon: richtext
+template: "<div class=\"clearfix\">\n    [[+value]]\n</div>"
+properties: '[]'
+availability: ''
+layouts: ''
+settings: '[]'

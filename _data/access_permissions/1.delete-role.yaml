@@ -1,0 +1,4 @@
+id: 27
+template: 1
+name: delete_role
+description: perm.delete_role_desc

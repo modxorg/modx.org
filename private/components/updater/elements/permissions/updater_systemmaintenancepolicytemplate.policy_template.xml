@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policy_template>
+    <template_group>Admin</template_group>
+    <name>Updater_SystemMaintenancePolicyTemplate</name>
+    <description>Policy template for system maintenance related tasks.</description>
+    <lexicon>updater:permissions</lexicon>
+    <permissions>
+        <permission>
+            <name>updater.system_receive_package_notifications</name>
+            <description>updater.perm.system_receive_package_notifications</description>
+            <value>1</value>
+        </permission>
+        <permission>
+            <name>updater.system_receive_core_notifications</name>
+            <description>updater.perm.system_receive_core_notifications</description>
+            <value>1</value>
+        </permission>
+        <permission>
+            <name>updater.system_perform_maintenance_tasks</name>
+            <description>updater.perm.system_perform_maintenance_tasks</description>
+            <value>1</value>
+        </permission>
+    </permissions>
+</policy_template>

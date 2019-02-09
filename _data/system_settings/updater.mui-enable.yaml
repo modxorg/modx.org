@@ -1,0 +1,5 @@
+key: updater.mui_enable
+value: '1'
+xtype: combo-boolean
+namespace: updater
+area: '(9) Managed Update Information'

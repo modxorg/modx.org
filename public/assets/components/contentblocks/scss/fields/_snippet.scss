@@ -1,0 +1,56 @@
+.contentblocks-field-snippet-select {
+  overflow: hidden;
+  label {
+    float: left;
+    width: 30%;
+  }
+  select {
+    float: left;
+    width: 40%;
+  }
+}
+
+.contentblocks-field-snippet-add-property, .contentblocks-field-snippet-uncached {
+  overflow: hidden;
+  padding-top: 3px;
+
+  label {
+    float: left;
+    width: 30%;
+  }
+  select {
+    float: left;
+    width: 40%;
+  }
+}
+
+.contentblocks-properties-list {
+  display: none;
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
+
+  li {
+    overflow: hidden;
+    position: relative;
+    padding-top: 3px;
+
+    a {
+      position: absolute;
+      right: 0;
+      top: 3px;
+      padding: 6px 8px 5px 8px;
+      text-align: right;
+      z-index: 5;
+      background-color: #fff;
+    }
+  }
+  label {
+    float: left;
+    width: 30%;
+  }
+  input.property {
+    float: left;
+    width: 70%;
+  }
+}

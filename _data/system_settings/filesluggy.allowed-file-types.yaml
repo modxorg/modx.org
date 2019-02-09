@@ -1,0 +1,4 @@
+key: filesluggy.allowed_file_types
+value: 'jpg,jpeg,png,gif,psd,ico,bmp,svg,doc,docx,pdf'
+namespace: filesluggy
+area: fs_type

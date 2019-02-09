@@ -1,0 +1,8 @@
+id: 1
+key: emailsender
+label: 'Globale Absenderadresse für E-Mails'
+xtype: textfield
+description: ''
+is_required: 1
+value: office@seda.digital
+group: 1

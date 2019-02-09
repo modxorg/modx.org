@@ -1,0 +1,6 @@
+text: import_resources
+parent: site
+action: system/import
+description: import_resources_desc
+menuindex: 6
+permissions: import_static

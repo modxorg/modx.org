@@ -1,0 +1,9 @@
+id: 6
+name: 'Zuletzt bearbeitete Ressourcen'
+description: ''
+type: file
+content: '[[++manager_path]]controllers/default/dashboard/widget.grid-rer.php'
+namespace: core
+size: full
+name_trans: 'Zuletzt bearbeitete Ressourcen'
+description_trans: ''

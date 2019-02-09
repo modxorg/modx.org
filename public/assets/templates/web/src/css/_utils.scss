@@ -1,0 +1,122 @@
+/* ==========================================================================
+   #ATOM STYLES
+   ========================================================================== */
+$utilprefixclass: '' !default; // required for editor.css
+/**
+ * Atom Styles
+ *
+ * Used to add the following atomic styles:
+ *
+ * 1. margin styles
+ * 2. padding styles
+ * 3. js, no-js
+ * 4. text color
+ * 5. background color
+ */
+
+.#{$utilprefixclass}u-no-margin {
+    margin: 0 !important;
+}
+.#{$utilprefixclass}u-no-margin--top {
+    margin-top: 0 !important;
+}
+.#{$utilprefixclass}u-no-margin--bottom {
+    margin-bottom: 0 !important;
+}
+
+.#{$utilprefixclass}u-no-padding {
+    padding: 0 !important;
+}
+.#{$utilprefixclass}u-no-padding--top {
+    padding-top: 0 !important;
+}
+.#{$utilprefixclass}u-no-padding--bottom {
+    padding-bottom: 0 !important;
+}
+
+@each $name, $size in $extra-class-sizes {
+    .#{$utilprefixclass}u-extra-#{$name}-margin--top {
+        margin-top: $size !important;
+    }
+    .#{$utilprefixclass}u-extra-#{$name}-margin--bottom {
+        margin-bottom: $size !important;
+    }
+    .#{$utilprefixclass}u-extra-#{$name}-padding--top {
+        padding-top: $size !important;
+    }
+    .#{$utilprefixclass}u-extra-#{$name}-padding--bottom {
+        padding-bottom: $size !important;
+    }
+}
+
+
+html.no-js {
+    .u-show-with-js {
+        display: none !important;
+    }
+}
+html.js {
+    .u-hide-with-js {
+        display: none !important;
+    }
+}
+
+@each $name, $color in map-merge($foundation-palette, (white: #fff)) {
+    .#{$utilprefixclass}u-color--#{$name} {
+        color: $color !important;
+        fill: $color !important;
+    }
+}
+
+@each $name, $color in map-merge($foundation-palette, (light: $light-gray)) {
+    .#{$utilprefixclass}u-background--#{$name} {
+        background: rgba($color, $global-transparency);
+
+        > *, > div > * {
+            color: color-pick-contrast($color, ($white, $body-font-color), 0.6);
+            fill: color-pick-contrast($color, ($white, $body-font-color), 0.6);
+        }
+    }
+}
+
+.#{$utilprefixclass}u-success {
+    color: get-color(success);
+    border: rem(2) solid get-color(success);
+    border-radius: $global-radius;
+    padding: rem(16 20);
+}
+
+.#{$utilprefixclass}u-warning {
+    color: get-color(warning);
+    border: rem(2) solid get-color(warning);
+    border-radius: $global-radius;
+    padding: rem(16 20);
+    font-weight: $global-weight-bold;
+}
+
+.u-error {
+    color: get-color(alert);
+    border: rem(2) solid get-color(alert);
+    border-radius: $global-radius;
+    padding: rem(16 20);
+
+    &--inline {
+        background-color: get-color(alert);
+        color: $white;
+        display: inline-block;
+        width: 100%;
+        padding: rem(5);
+        line-height: 1;
+        font-size: $small-font-size;
+        margin-bottom: rem(15);
+    }
+
+    input {
+        border-color: get-color(alert);
+
+        &::placeholder {
+            color: get-color(alert);
+        }
+    }
+
+}

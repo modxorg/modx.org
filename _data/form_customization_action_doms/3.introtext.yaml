@@ -1,0 +1,11 @@
+id: 137
+set: 3
+action: resource/create
+name: introtext
+description: null
+container: modx-panel-resource
+rule: fieldVisible
+value: '0'
+constraint_class: modResource
+for_parent: 1
+rank: 5

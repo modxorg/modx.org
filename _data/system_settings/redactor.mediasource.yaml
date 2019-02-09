@@ -1,0 +1,5 @@
+key: redactor.mediasource
+value: '2'
+xtype: modx-combo-source
+namespace: redactor
+area: Media

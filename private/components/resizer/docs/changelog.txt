@@ -1,0 +1,98 @@
+Resizer Changelog
+
+v1.0.1-pl  [26.05.2014]
+-----------------------
+
+- [#6] GD: Fix PNG transparency on watermark images
+- Add MODX base_path to search list for watermark assets
+
+
+v1.0.0-pl  [29.04.2014]
+-----------------------
+
+- Structural overhaul: core functionality now bundled as a Composer
+  package (oo12/Reductionist)
+- Performance improvements for thumbnailing large jpegs using Imagick
+  or Gmagick
+- Add preliminary support for watermarking: wmt and wmi filters
+  (hat tip funkbilly)
+- Add auto CMYK to RGB conversion and strip embedded profiles/metadata
+  to reduce thumbnail size
+- Improve handling of rounding discrepancies when calculating dimensions
+- Fix quality scaling when zoom cropping
+
+
+v0.5.1-pl  [23.03.2014]
+-----------------------
+
+- Fix handing of far parameter for undersized images when aoe=0
+- Fix reported output dimensions in some cases
+
+
+v0.5.0-pl  [15.03.2014]
+-----------------------
+
+- [#3] Add partial support for fltr[]=usm
+- [#4] Fix execution order for source crop parameters. Now works with
+  Image+ 2.2.
+- Improve debug output
+- Add properties for final width and height
+- Merge latest Imagine commits
+- Several minor performance tweaks
+
+
+v0.4.1-pl  [10.11.2013]
+-----------------------
+
+- Make input file checking and class loading a little more robust
+
+
+v0.4.0-pl  [05.10.2013]
+-----------------------
+
+- Add bg (background color) parameter
+- Add far (force aspect ratio) parameter
+- [#1] Fix an issue with the package validator and older versions of
+  the Imagick extension
+- Merge latest Imagine commits
+
+
+v0.3.2-pl  [29.09.2013]
+-----------------------
+
+- Fix a bug in the Imagine Imagick driver (affected a few, mostly older
+  versions of ImageMagick)
+
+
+v0.3.1-pl  [08.09.2013]
+-----------------------
+
+- Fix a bug when sw or sh (but not both) is specified
+
+
+v0.3.0-pl  [07.09.2013]
+-----------------------
+
+- Add sw, sh, sx, sy options
+- Add maxq option for jpeg quality scaling on undersized input images
+- Add available memory check when using GD
+- Fix scale option name and improve operation
+- Expand debug messages
+- Merge latest Imagine commits
+
+
+v0.2.0-rc1  [25.08.2013]
+--------------------
+
+- Convert to a separate package
+- Add scale and strip options
+- Integrate latest Imagine repo
+- Improve error handling
+- Add more debug info
+- Various minor improvements
+
+
+v0.1.0
+------
+
+- Initial Release

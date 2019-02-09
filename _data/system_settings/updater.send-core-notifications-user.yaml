@@ -1,0 +1,4 @@
+key: updater.send_core_notifications_user
+xtype: combo-boolean
+namespace: updater
+area: '(2) Notifications: Core'

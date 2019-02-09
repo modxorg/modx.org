@@ -1,0 +1,4 @@
+id: 60
+template: 1
+name: flush_sessions
+description: perm.flush_sessions_desc

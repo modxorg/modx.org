@@ -1,0 +1,4 @@
+key: default_media_source
+value: '2'
+xtype: modx-combo-source
+area: manager

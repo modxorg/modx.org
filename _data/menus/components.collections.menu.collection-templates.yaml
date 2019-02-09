@@ -1,0 +1,5 @@
+text: collections.menu.collection_templates
+parent: components
+action: '4'
+description: collections.menu.collection_templates_desc
+menuindex: 5

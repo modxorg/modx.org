@@ -1,0 +1,7 @@
+ContentBlocks is proprietary software, developed by Mark Hamstra for modmore. By purchasing ContentBlocks via https://www.modmore.com/extras/contentblocks/, you have received a usage license for a single (1) MODX Revolution installation, including one year (starting on date of purchase) of email support.
+
+While we hope ContentBlocks is useful to you and we will try to help you successfully use ContentBlocks, modmore is not liable for loss of revenue, damages or other financial loss resulting from the installation or use of ContentBlocks.
+
+By using and installing this package, you acknowledge that you shall only use this on a single MODX installation.
+
+Redistribution in any shape or form is strictly prohibited. You may customize or change the provided source code to tailor ContentBlocks for your own use, as long as no attempt is made to remove license protection measures. By changing source code you acknowledge you void the right to support unless coordinated with modmore support.

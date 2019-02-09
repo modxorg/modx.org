@@ -1,0 +1,4 @@
+key: updater.show_broadcast_messages
+xtype: combo-boolean
+namespace: updater
+area: 'Broadcast Bar'

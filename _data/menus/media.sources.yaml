@@ -1,0 +1,6 @@
+text: sources
+parent: media
+action: source
+description: sources_desc
+menuindex: 1
+permissions: sources

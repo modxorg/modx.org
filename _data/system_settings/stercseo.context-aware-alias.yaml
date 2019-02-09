@@ -1,0 +1,5 @@
+key: stercseo.context-aware-alias
+value: '0'
+xtype: combo-boolean
+namespace: stercseo
+area: general

@@ -1,0 +1,5 @@
+id: 7
+target: '3'
+principal_class: modUserGroup
+principal: 1
+policy: 8

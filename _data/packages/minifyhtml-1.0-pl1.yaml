@@ -1,0 +1,14 @@
+signature: minifyhtml-1.0-pl1
+created: '2019-01-11 17:47:20'
+installed: '2019-01-11 17:47:29'
+state: 0
+workspace: 1
+provider: 1
+source: minifyhtml-1.0-pl1.transport.zip
+manifest: null
+attributes: "a:6:{s:6:\"readme\";s:117:\"A simple plugin that minifies the entire HTML content of rendered pages before caching. Install, and that\\s it!\n    \n\";s:9:\"signature\";s:18:\"minifyhtml-1.0-pl1\";s:6:\"action\";s:26:\"workspace/packages/install\";s:8:\"register\";s:3:\"mgr\";s:5:\"topic\";s:46:\"/workspace/package/install/minifyhtml-1.0-pl1/\";s:14:\"package_action\";i:0;}"
+package_name: MinifyHTML
+metadata: 'a:38:{s:2:"id";s:24:"5722c34df05e8b5f3d2a5511";s:7:"package";s:24:"5722c34df05e8b5f3d2a5510";s:12:"display_name";s:18:"minifyhtml-1.0-pl1";s:4:"name";s:10:"MinifyHTML";s:7:"version";s:3:"1.1";s:13:"version_major";s:1:"1";s:13:"version_minor";s:1:"1";s:13:"version_patch";s:0:"";s:7:"release";s:3:"pl1";s:8:"vrelease";s:2:"pl";s:14:"vrelease_index";s:1:"1";s:6:"author";s:12:"rainbowtiger";s:11:"description";s:134:"<p>This is a very simple extra that minifies the entire HTML content of your pages before they are cached. Install, and that''s it!</p>";s:12:"instructions";s:90:"<p>Install the plugin, and that''s all you need to do. Your pages will be minified now.</p>";s:9:"changelog";s:0:"";s:9:"createdon";s:24:"2016-04-29T02:13:33+0000";s:9:"createdby";s:12:"rainbowtiger";s:8:"editedon";s:24:"2019-01-11T11:52:01+0000";s:10:"releasedon";s:24:"2016-05-02T07:35:53+0000";s:9:"downloads";s:4:"2549";s:8:"approved";s:4:"true";s:7:"audited";s:5:"false";s:8:"featured";s:5:"false";s:10:"deprecated";s:5:"false";s:7:"license";s:5:"GPLv2";s:7:"smf_url";s:0:"";s:10:"repository";s:24:"4d4c3fa6b2b0830da9000001";s:8:"supports";s:3:"2.2";s:8:"location";s:60:"http://modx.com/extras/download/?id=5722c34df05e8b5f3d2a5512";s:9:"signature";s:18:"minifyhtml-1.0-pl1";s:11:"supports_db";s:12:"mysql,sqlsrv";s:16:"minimum_supports";s:3:"2.2";s:9:"breaks_at";s:8:"10000000";s:10:"screenshot";s:65:"http://modx.s3.amazonaws.com/extras%2F5722c34df05e8b5f3d2a5510%2F";s:4:"file";a:7:{s:2:"id";s:24:"5722c34df05e8b5f3d2a5512";s:7:"version";s:24:"5722c34df05e8b5f3d2a5511";s:8:"filename";s:32:"minifyhtml-1.0-pl1.transport.zip";s:9:"downloads";s:4:"2549";s:6:"lastip";s:13:"141.8.194.242";s:9:"transport";s:4:"true";s:8:"location";s:60:"http://modx.com/extras/download/?id=5722c34df05e8b5f3d2a5512";}s:17:"package-signature";s:18:"minifyhtml-1.0-pl1";s:10:"categories";s:15:"core-extensions";s:4:"tags";s:0:"";}'
+version_major: 1
+release: pl
+release_index: 1

@@ -1,0 +1,5 @@
+key: contentblocks.image.source
+value: '2'
+xtype: modx-combo-source
+namespace: contentblocks
+area: 'Input: Image'

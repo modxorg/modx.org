@@ -1,0 +1,61 @@
+.contentblocks-field-fileinput_file {
+  margin-bottom: 5px;
+  padding: 5px 0;
+  position: relative;
+  @include subfield-separator();
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  .contentblocks-field-fileinput_file-view {
+    margin: 5px 0;
+    position: relative;
+  }
+  .file-title {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    &:before {
+      opacity: 0.6;
+      display: inline-block;
+      margin-right: .5em;
+    }
+  }
+
+  .contentblocks-fileinput_file-delete {
+    display: none;
+  }
+  &:hover .contentblocks-fileinput_file-delete,
+  &:focus .contentblocks-fileinput_file-delete {
+    display: inline-block;
+  }
+}
+.contentblocks-fileinput_file-delete {
+  color: #707070;
+  line-height: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: none;
+}
+
+.contentblocks-field-fileinput_file-uploading {
+ display: none;
+  .uploading & {
+    display: block;
+  }
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+
+  .upload-progress {
+    height: 2px;
+    width: 100%;
+
+    .bar {
+      height: 100%;
+      background: #008000;
+      width: 1%;
+    }
+  }
+}

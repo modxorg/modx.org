@@ -1,0 +1,25 @@
+{
+  "name": "@modmore/contentblocks",
+  "description": "ContentBlocks for MODX",
+  "version": "0.0.0",
+  "dependencies": {
+    "autoprefixer": "^8.6.5",
+    "concat": "^1.0.3",
+    "node-sass": "^4.10.0",
+    "parallelshell": "^3.0.2",
+    "uglify-js": "^3.4.9",
+    "watch": "^1.0.2"
+  },
+  "scripts": {
+    "build": "parallelshell \"npm run build:js\" \"npm run build:css\"",
+    "build:js": "parallelshell \"npm run build:js:main\" \"npm run build:js:inputs\"",
+    "build:js:main": "uglifyjs js/bower_components/jquery/dist/jquery.min.js js/vendor/tinyrte/tinyrte.js js/vendor/jquery.autogrowtextarea.js js/vendor/jquery.powertip-1.2.0/jquery.powertip.js js/vendor/jqueryui/jquery-ui-1.12.1.custom.min.js js/bower_components/blueimp-file-upload/js/jquery.iframe-transport.js js/bower_components/blueimp-file-upload/js/jquery.fileupload.js js/bower_components/blueimp-tmpl/js/tmpl.min.js js/bower_components/typeahead.js/dist/bloodhound.min.js js/vendor/hogan-2.0.0.js js/bower_components/typeahead.js/dist/typeahead.bundle.js js/vendor/cropper.js/cropper.min.js js/contentblocks.js js/cropper.js --compress --mangle --source-map \"root='../',url=contentblocks-min.js.map\" --output dist/contentblocks-min.js",
+    "build:js:inputs": "uglifyjs js/inputs/text.js js/inputs/link.js js/inputs/table.js js/inputs/misc.js js/inputs/image.js js/inputs/file.js js/inputs/chunk.js js/inputs/dropdown.js js/inputs/snippet.js js/inputs/chunk-selector.js js/inputs/layout.js --compress --mangle --source-map \"root='../../',url=all-min.js.map\" --output dist/inputs/all-min.js && uglifyjs js/inputs/code.js --compress --mangle --source-map \"root='../../',url=code-min.js.map\" --output dist/inputs/code-min.js && uglifyjs js/inputs/list.js --compress --mangle --source-map \"root='../../',url=list-min.js.map\" --output dist/inputs/list-min.js && uglifyjs js/inputs/video.js --compress --mangle --source-map \"root='../../',url=video-min.js.map\" --output dist/inputs/video-min.js && uglifyjs js/inputs/gallery.js --compress --mangle --source-map \"root='../../',url=gallery-min.js.map\" --output dist/inputs/gallery-min.js && uglifyjs js/inputs/repeater.js --compress --mangle --source-map \"root='../../',url=repeater-min.js.map\" --output dist/inputs/repeater-min.js",
+    "build:css": "node-sass --source-map dist/ --output-style compressed scss/contentblocks.scss dist/contentblocks.css",
+    "watch": "parallelshell \"npm run watch:js\" \"npm run watch:css\"",
+    "watch:js": "parallelshell \"npm run watch:js:main\" \"npm run watch:js:inputs\"",
+    "watch:js:main": "watch \"npm run build:js\" js",
+    "watch:js:inputs": "watch \"npm run build:js\" js/inputs/",
+    "watch:css": "watch \"npm run build:css\" scss"
+  }
+}

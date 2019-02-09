@@ -1,0 +1,4 @@
+key: feed_modx_security_enabled
+value: '0'
+xtype: combo-boolean
+area: system

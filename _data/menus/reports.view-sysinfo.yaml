@@ -1,0 +1,6 @@
+text: view_sysinfo
+parent: reports
+action: system/info
+description: view_sysinfo_desc
+menuindex: 3
+permissions: view_sysinfo

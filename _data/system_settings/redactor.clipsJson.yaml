@@ -1,0 +1,5 @@
+key: redactor.clipsJson
+value: "[\n    {\n        \"title\": \"© (Copyright)\",\n        \"clip\": \"©\"\n    },\n    {\n        \"title\": \"® (Registered Trademark)\",\n        \"clip\": \"®\"\n    },\n    {\n        \"title\": \"$ (Dollar)\",\n        \"clip\": \"$\"\n    },\n    {\n        \"title\": \"€ (Euro)\",\n        \"clip\": \"€\"\n    },\n    {\n        \"title\": \"¢ (Cent)\",\n        \"clip\": \"¢\"\n    },\n    {\n        \"title\": \"£ (Pound)\",\n        \"clip\": \"£\"\n    }\n]"
+xtype: textarea
+namespace: redactor
+area: Toolbar

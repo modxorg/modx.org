@@ -1,0 +1,6 @@
+text: dashboards
+parent: admin
+action: system/dashboards
+description: dashboards_desc
+menuindex: 2
+permissions: dashboards

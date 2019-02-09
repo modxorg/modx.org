@@ -1,0 +1,13 @@
+id: 3
+parent_properties: ''
+input: image
+name: Bild
+description: ''
+sortorder: 2
+category: 1
+icon: image
+template: "<figure>\n    [[+link:notempty=`<a href=\"[[+link]]\" target=\"[[+link_target:default=`_self`]]\" rel=\"[[+link_target:is=`_blank`:then=`noopener noreferrer`:else=``]]\">`]]\n    <img alt=\"[[+alttext:htmlspecial]]\" src=\"[[++project.assets_url]]placeholder.gif\" class=\"u-lazyload\" data-owidth=\"[[+width]]\" data-oheight=\"[[+height]]\" data-srcset=\"[[+url:imageoptim=`[[+resizewidth]],scale-down`]] 1x, [[+url:imageoptim=`[[+resizewidth]],2x,scale-down`]] 2x\" width=\"[[+resizewidth]]\" height=\"[[calculateImgHeight? &resizewidth=`[[+resizewidth]]` &owidth=`[[+width]]` &oheight=`[[+height]]`]]\">\n    <noscript>\n        <img alt=\"[[+alttext:htmlspecial]]\" src=\"[[+url:imageoptim=`[[+resizewidth]],scale-down`]]\" width=\"[[+resizewidth]]\" height=\"[[calculateImgHeight? &resizewidth=`[[+resizewidth]]` &owidth=`[[+width]]` &oheight=`[[+height]]`]]\">\n    </noscript>\n    [[+link:notempty=`</a>`]]\n</figure>"
+properties: '{"source":"2","directory":"images\/","crop_directory":"assets\/crops\/","crops":"","open_crops_automatically":"false","file_types":"png,gif,jpg,jpeg","thumbnail_size":"0","thumbnail_crop":""}'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"alttext","title":"Alternativ Text","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"resizewidth","title":"Bildbreite (in Pixeln)","fieldtype":"textfield","default_value":"576","fieldoptions":"","field_is_exposed":"asField"},{"reference":"link","title":"Link","fieldtype":"link","default_value":"","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"","field_is_exposed":"asField","process_tags":"1"},{"reference":"link_target","title":"Link Ziel","fieldtype":"select","default_value":"_self","image_source":"","image_directory":"","image_file_types":"","image_thumbnail_size":"","fieldoptions":"_self==gleiches Fenster\n_blank==neues Fenster","field_is_exposed":"modal"}]'

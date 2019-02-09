@@ -1,0 +1,4 @@
+key: redactor.image_browse_path
+value: images/
+namespace: redactor
+area: Media

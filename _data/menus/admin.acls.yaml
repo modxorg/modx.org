@@ -1,0 +1,6 @@
+text: acls
+parent: admin
+action: security/permission
+description: acls_desc
+menuindex: 5
+permissions: access_permissions

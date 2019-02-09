@@ -1,0 +1,6 @@
+text: lexicon_management
+parent: admin
+action: workspaces/lexicon
+description: lexicon_management_desc
+menuindex: 7
+permissions: lexicons

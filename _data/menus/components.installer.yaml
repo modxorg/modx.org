@@ -1,0 +1,5 @@
+text: installer
+parent: components
+action: workspaces
+description: installer_desc
+permissions: packages

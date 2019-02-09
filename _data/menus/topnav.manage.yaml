@@ -1,0 +1,4 @@
+text: manage
+parent: topnav
+menuindex: 3
+permissions: menu_tools

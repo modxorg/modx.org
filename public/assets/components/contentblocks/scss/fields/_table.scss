@@ -1,0 +1,16 @@
+.contentblocks-field-table {
+  table {
+    width: 100%;
+
+    td {
+      vertical-align: top;
+    }
+  }
+  .contentblocks-field-table-instance {
+    width: 100%;
+  }
+}
+// Fixes the context menu going underneath the add content button or other elements
+.htContextMenu {
+  z-index: 10;
+}

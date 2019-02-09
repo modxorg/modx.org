@@ -1,0 +1,70 @@
+ul.contentblocks-field-list-outer {
+  margin-left: 1.5em;
+  list-style: disc;
+
+  .ordered &, .ordered & ul {
+    list-style-type: decimal;
+  }
+
+  ul {
+    margin-left: 1.5em;
+    list-style: disc;
+  }
+  li {
+    > div {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    &:hover, &:focus {
+      & > div > .list-actions {
+        display: block;
+      }
+    }
+  }
+
+  > li:only-child > div > .list-actions > .contentblocks-field-list-delete {
+    display: none;
+  }
+
+  input[type=text] {
+    display: inline;
+    padding-left: 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  .list-actions {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px 0 5px 8px;
+    text-align: right;
+    z-index: 5;
+    background-color: #fff;
+  }
+
+  // Specific positioning fixes for the tiny rte
+  .tinyrte-iframe {
+    margin-bottom: -13px;
+  }
+
+  li {
+    .has-tinyrte & {
+      margin-bottom: 11px;
+    }
+
+    .contentblocks-field-list-nested li {
+      .has-tinyrte & {
+        margin-top: 11px;
+      }
+    }
+  }
+}
+
+.contentblocks-field-list-nested {
+
+}

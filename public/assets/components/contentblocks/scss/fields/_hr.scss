@@ -1,0 +1,9 @@
+.contentblocks-field-hr {
+  margin: -17px 0 -20px;
+  & .contentblocks-field-actions {
+    background: #fff;
+  }
+  & + .contentblocks-exposed-fields-wrapper {
+    margin-top: 30px;
+  }
+}

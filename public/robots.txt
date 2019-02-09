@@ -1,0 +1,11 @@
+User-agent: *
+
+# Sitemap: http://example.tld/sitemap.xml uncomment after setup
+
+Disallow: /*.cgi$
+Disallow: /*.gz$
+Disallow: /*.inc$
+Disallow: /*.php$
+Disallow: /*.php*
+Disallow: /*.tpl$
+Disallow: /*.wmv$

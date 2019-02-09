@@ -1,0 +1,69 @@
+// import foundation settins and scss
+@import '../../node_modules/foundation-sites/scss/util/util';
+@import 'functions';
+@import 'settings';
+@import '../../node_modules/foundation-sites/scss/foundation';
+
+.redactor-editor, .redactor-dropdown-box-formatting {
+    @include foundation-typography;
+    @import 'typography';
+    $utilprefixclass: 'redactor-formatting-undefined-';
+    @import 'utils';
+
+    .redactor-formatting-p-c-lead, .c-lead {
+        font-size: $lead-font-size;
+        line-height: $lead-lineheight;
+        font-family: $lead-font-family;
+        font-weight: $lead-font-weight;
+        color: $lead-font-color;
+    }
+}
+
+.redactor-editor, .redactor-dropdown-box-formatting {
+    *, p, div, ul, ol, table, dl, blockquote, pre, span {
+        font-family: $body-font-family !important;
+        color: $body-font-color;
+        font-size: rem(16);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $header-font-family !important;
+    }
+}
+
+.redactor-editor {
+    *, p, div, ul, ol, table, dl, blockquote, pre, span {
+        font-size: rem(16);
+    }
+}
+
+.redactor-dropdown-box-formatting a {
+    color: #000;
+    font-size: rem(14);
+}
+
+// Reset Formatting Button
+.redactor-dropdown-box-formatting a.redactor-formatting-undefined {
+    background: #F2F2F2;
+    color: red;
+    font-weight: bold;
+}
+
+.redactor-dropdown-undefined-u-color--white {
+    background: gray;
+}
+
+// Toolbar Formatting Button
+.redactor-toolbar a.re-formatting {
+    background: #e6e6e6;
+
+    &:after {
+        content: "Formatierung";
+        font-family: $body-font-family;
+        font-size: 13px;
+        line-height: 1;
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        padding-left: 2px;
+    }
+}

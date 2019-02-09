@@ -1,0 +1,6 @@
+text: eventlog_viewer
+parent: reports
+action: system/event
+description: eventlog_viewer_desc
+menuindex: 2
+permissions: view_eventlog

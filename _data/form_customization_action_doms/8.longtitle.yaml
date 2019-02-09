@@ -1,0 +1,10 @@
+id: 1146
+set: 8
+action: 'resource/*'
+name: longtitle
+description: null
+container: modx-panel-resource
+rule: fieldTitle
+value: Seitentitel
+constraint_class: modResource
+rank: 4

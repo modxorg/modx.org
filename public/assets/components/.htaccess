@@ -1,0 +1,2 @@
+# Do not index anything inside the components folder
+Header set X-Robots-Tag "noindex, nofollow"

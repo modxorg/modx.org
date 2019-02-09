@@ -1,0 +1,6 @@
+text: flush_access
+parent: manage
+description: flush_access_desc
+menuindex: 3
+handler: "MODx.msg.confirm({\n    title: _('flush_access')\n    ,text: _('flush_access_confirm')\n    ,url: MODx.config.connector_url\n    ,params: {\n        action: 'security/access/flush'\n    }\n    ,listeners: {\n        'success': {fn:function() { location.href = './'; },scope:this},\n        'failure': {fn:function(response) { Ext.MessageBox.alert('failure', response.responseText); },scope:this},\n    }\n});"
+permissions: access_permissions

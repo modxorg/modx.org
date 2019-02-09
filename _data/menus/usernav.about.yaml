@@ -1,0 +1,6 @@
+text: about
+parent: usernav
+action: help
+icon: '<i class="icon-question-circle icon icon-large"></i>'
+menuindex: 7
+permissions: help

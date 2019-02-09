@@ -1,0 +1,4 @@
+key: updater.debug
+xtype: combo-boolean
+namespace: updater
+area: Debug

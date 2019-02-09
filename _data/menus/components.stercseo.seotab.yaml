@@ -1,0 +1,5 @@
+text: stercseo.seotab
+parent: components
+action: home
+description: stercseo.menu_desc
+namespace: stercseo

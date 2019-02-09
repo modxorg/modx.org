@@ -1,0 +1,20 @@
+.contentblocks-field-layout {
+  > .contentblocks-layout-wrapper {
+    margin-top: 30px;
+  }
+}
+
+.contentblocks-field-layout-wrapper {
+  border: $wrapperBorder;
+
+  .modx_v23 & {
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.3);
+  }
+}
+
+// Hide the Add Layout Here button on the first layout in a nested layout because it gets overlayed on the layout
+// field options (delete/settings)
+.contentblocks-field-layout-wrapper > .contentblocks-layout-wrapper > .contentblocks-layout:first-child .contentblocks-add-layout-here {
+  display: none;
+}

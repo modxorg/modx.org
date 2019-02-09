@@ -1,0 +1,48 @@
+++ QuickstartButtons 1.3.0-rc1
+++ Released on 2016-03-07
++++++++++++++++++++++++++
+- Update to Font Awesome 4.5.0 [#21]
+- Make sure icons resolver adds new icons on update
+- Fix CSS scoping issue [#35]
+- Fix issue loading Font Awesome CSS with compress_css enabled [#20]
+- Add missing media/browser action [#34]
+- Fix loading actions after save [#31]
+- Allow linking to actions with the action key and namespace [#32]
+- Fix issue displaying the set name due to caching [#23]
+
+++ QuickstartButtons 1.2.0-pl
+++ Released on 2014-04-13
++++++++++++++++++++++++++
+- Better design for the latest 2.3 theme (thanks Christian Seel!)
+
+++ QuickstartButtons 1.2.0-rc1
+++ Released on 2014-04-09
++++++++++++++++++++++++++
+- Update actions dropdown and buttons to link to 2.3-style actions
+- Move menu item lower in the top nav to make sure the Installer stays first
+- Conditionally load MODX 2.3 specific stylesheet (thanks Tomislav J!)
+
+++ QuickstartButtons 1.1.1-pl
+++ Released on 2014-08-04
++++++++++++++++++++++++++
+- Give windows an automatic height and fix 2.3 window vtabs styling
+- Ensure menu item is created on 2.3 by moving to components
+
+++ QuickstartButtons 1.1.0-pl
+++ Released on 2014-05-06
++++++++++++++++++++++++++
+- New feature: added customizable icons for buttons (Media Source & File selection)
+- New feature: duplicate set (with buttons)
+
+++ QuickstartButtons 1.0.1-pl
+++ Released on 2014-03-29
++++++++++++++++++++++++++
+- New feature: system action properties passed by string
+- Improvement: caching on dashboard widget, per user group names of the user
+- Styling issues dashboard buttons fixed (Thanks to @christianseel)
+- Fix installing defaults on upgrade
+
+++ QuickstartButtons 1.0.0-pl
+++ Released on 2014-03-24
++++++++++++++++++++++++++
+- Initial release

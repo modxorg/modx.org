@@ -1,0 +1,4 @@
+id: 16
+template: 1
+name: database_truncate
+description: perm.database_truncate_desc

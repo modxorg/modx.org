@@ -1,0 +1,5 @@
+text: new_resource
+parent: site
+action: resource/create
+description: new_resource_desc
+permissions: new_document

@@ -1,0 +1,4 @@
+id: 28
+template: 1
+name: delete_user
+description: perm.delete_user_desc

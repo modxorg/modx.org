@@ -1,0 +1,6 @@
+text: propertysets
+parent: admin
+action: element/propertyset
+description: propertysets_desc
+menuindex: 6
+permissions: property_sets

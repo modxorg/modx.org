@@ -1,0 +1,42 @@
+# Ignore various IDE, OS or Hosting specific files
+.idea/
+.buildpath
+.project
+.settings/
+nbproject/
+web.config
+.DS_Store
+.qicon
+.vscode
+/public/usage
+
+# Ignore php and txt files beginning with test in root and public directory
+/test*.php
+/test*.txt
+/public/test*.php
+/public/test*.txt
+
+# Ignore backups (except bootstrap.sql)
+/_backups/*
+!/_backups/bootstrap.sql
+
+# MODX CMS
+/private/config/*
+!/private/config/*.example.php
+/private/cache/
+/private/packages/*/
+/private/logs/*
+!/private/logs/README.md
+/public/setup/
+
+# Vagrant / Virtual Machine
+.vagrant
+/_server/tmp/
+/public/assets/templates/*/.livereload
+# We don't need all puppet modules in our repository, we just need our custom
+# gitify module. All others will be downloaded and installed by the puppet.sh script
+/_server/puppet/modules/*
+!/_server/puppet/modules/gitify/
+
+# keep gitkeep
+!.gitkeep

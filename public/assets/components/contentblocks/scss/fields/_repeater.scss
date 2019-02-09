@@ -1,0 +1,268 @@
+.contentblocks-field-repeater {
+  margin: -10px -15px;
+  & > label {
+    padding: 0 15px;
+  }
+  .contentblocks-repeater-collapser {
+    top: 22px;
+  }
+  .contentblocks-repeater-item-collapser {
+    top: 22px;
+  }
+}
+
+.contentblocks-repeater-wrapper {
+}
+
+.contentblocks-field-actions-top {
+  padding: 0 15px;
+  text-align: center;
+
+  label {
+    display: inline;
+    padding-left: 1em;
+  }
+}
+.contentblocks-field-actions-bottom {
+  padding: 15px 15px 0;
+  text-align: center;
+}
+
+.contentblocks-repeater-row {
+  padding: 15px 5px;
+  border-bottom: 5px dotted #f5f5f5;
+  position: relative;
+
+  &:first-child {
+    margin-top: 15px;
+    border-top: 5px dotted #f5f5f5;
+  }
+}
+
+@for $i from 2 through 4 {
+  .contentblocks-repeater-#{$i}-columns {
+    clear: both;
+    border-top: 5px dotted #f5f5f5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    > .contentblocks-repeater-row {
+      width: 100 / $i * 1%;
+      float: left;
+      border-right: 5px dotted #f5f5f5;
+      border-top: none;
+      .contentblocks-repeater-item-collapser {
+        display: none;
+
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:nth-of-type(#{$i}n) {
+        border-right: none;
+      }
+
+      &:nth-of-type(#{$i}n+1) {
+        clear: both;
+      }
+    }
+    & + .contentblocks-field-actions-bottom {
+      clear: both;
+    }
+  }
+}
+.contentblocks-repeater-mini {
+  .contentblocks-field-actions-top {
+    display: none;
+  }
+  .contentblocks-repeater-item-collapser {
+    display: none;
+  }
+  .contentblocks-repeater-row {
+    padding: 0 30px 4px;
+    margin: 0;
+    border: none;
+    &.multirow {
+      //padding-bottom: 10px;
+      border-bottom: 1px solid #f5f5f5;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom:0;
+        border-bottom:0;
+      }
+
+      .contentblocks-field {
+        margin-bottom: 10px;
+      }
+    }
+    &:before {
+      content: "\f0c9";
+      color: #999;
+      font-family: 'fontawesome';
+      position: absolute;
+      left:10px;
+      top: 10px;
+
+    }
+  }
+  .contentblocks-field {
+    padding-top: 0;
+    > label {
+      float: left;
+      margin-right: 5px;
+      position: static;
+      line-height:normal;
+    }
+  }
+  .contentblocks-float-label,
+  .contentblocks-field-link {
+    padding-top: 0;
+    @include float-label-container;
+    @include float-label;
+    .contentblocks-field-link-displaytext {
+      padding: 1em 7px;
+    }
+    label {
+      z-index: 5;
+      color: #999;
+      line-height:35px;
+    }
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input, select {
+      @include float-label-input;
+      font-size: inherit;
+      padding-top: 1em;
+
+      @include float-label-scaled {
+        top: .25em;
+      }
+
+      //&:focus {
+      //  outline: none;
+      //  border-color: rgba(0,0,0,.5);
+      //}
+    }
+
+    .twitter-typeahead {
+      @include float-label-input;
+      font-size: inherit;
+
+      @include float-label-scaled {
+        top: .25em;
+      }
+
+    }
+
+    //select {
+    //  padding-right: 1em;
+    //  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
+    //  background-size: 8px 10px;
+    //}
+  }
+
+  .contentblocks-repeater-item-wrapper {
+    margin: 0 -3px;
+    > li {
+      padding: 1px 3px;
+      > .contentblocks-field-wrap {
+        padding: 0;
+      }
+    }
+  }
+
+  .contentblocks-repeater-item-actions {
+    padding:0;
+    top: 10px;
+    right: 5px;
+    background: #fff;
+    border-radius: 0;
+    //width: 30px;
+    //overflow: hidden;
+    .contentblocks-repeater-delete-row {
+      font-size: 15px;
+      .action-name {
+        display: none;
+      }
+      //width: 15px;
+      //height: 15px;
+      //overflow: hidden;
+      //text-align: left;
+    }
+  }
+}
+
+
+.contentblocks-repeater-item-actions {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  background-color: #f5f5f5;
+  padding: 5px 20px 5px 25px;
+  border-bottom-left-radius: 20px;
+
+  a {
+    border: none;
+    background-color: inherit;
+  }
+}
+
+.contentblocks-repeater-item-wrapper {
+  > li {
+    float: left;
+    > .contentblocks-field-wrap {
+      border-bottom: none;
+      padding: 5px 15px;
+      
+      > .contentblocks-field > .contentblocks-field-actions > .contentblocks-field-delete {
+        display: none; 
+      }
+    }
+    
+    > .contentblocks-add-content-here {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    zoom: 1;
+  }
+}
+
+// Nested repeaters, oh my..
+.contentblocks-repeater-item-wrapper > li > div > .contentblocks-field-repeater > .contentblocks-repeater-wrapper {
+  border-left: 5px solid #f5f5f5;
+  border-right: 5px solid #f5f5f5;
+  margin: 0 15px;
+}
+
+// Hide the repeater options for a repeater that has a fixed count (max == min)
+.contentblocks-repeater-fixed-count > .contentblocks-field-wrap > .contentblocks-field-repeater > .contentblocks-repeater-wrapper {
+  > .contentblocks-repeater-row {
+    padding: 5px 5px 15px;
+
+    > .contentblocks-repeater-item-actions {
+      display: none;
+    }
+  }
+}
+
+// Hide the collapse/expand on a repeater with a fixed number of 1 item
+.contentblocks-repeater-single-item .contentblocks-repeater-item-collapser {
+  display: none;
+}
+

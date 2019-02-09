@@ -1,0 +1,8 @@
+id: 8
+template: 2
+label: 'E-Mail an mich'
+name: tv_cbf_email
+width: 30
+php_renderer: cbf_collection_snippet_renderer_email
+position: 2
+sort_type: null

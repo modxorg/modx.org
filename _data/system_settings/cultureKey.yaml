@@ -1,0 +1,4 @@
+key: cultureKey
+value: de
+xtype: modx-combo-language
+area: language

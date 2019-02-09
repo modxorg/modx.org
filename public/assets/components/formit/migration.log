@@ -1,0 +1,92 @@
+[2017-02-17 11:30:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 70) No mcrypt encrypted forms found.
+[2017-02-17 11:30:12] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 70) No mcrypt encrypted forms found.
+[2017-03-14 23:08:07] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 71) No mcrypt encrypted forms found.
+[2017-03-15 00:13:16] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 63) No mcrypt encrypted forms found.
+[2017-03-19 23:25:50] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 63) No mcrypt encrypted forms found.
+[2017-03-19 23:26:22] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 63) No mcrypt encrypted forms found.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:01] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:02] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:03] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 501 encrypted forms are migrated.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) -------------------------------------------------------------
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) Successfully completed migration.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) A total of 408 encrypted forms are migrated.
+[2017-03-19 23:44:04] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) No mcrypt encrypted forms found.
+[2017-03-19 23:44:12] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) No mcrypt encrypted forms found.
+[2017-03-19 23:54:24] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) No mcrypt encrypted forms found.
+[2017-04-13 10:33:21] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 65) No mcrypt encrypted forms found.
+[2017-04-26 08:50:33] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) -------------------------------------------------------------
+[2017-04-26 08:50:33] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) Successfully completed migration.
+[2017-04-26 08:50:33] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) A total of 1 encrypted forms are migrated.
+[2017-04-26 08:50:33] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) No mcrypt encrypted forms found.
+[2017-04-26 10:14:39] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) -------------------------------------------------------------
+[2017-04-26 10:14:39] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) Successfully completed migration.
+[2017-04-26 10:14:39] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) A total of 3 encrypted forms are migrated.
+[2017-04-26 10:14:39] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) No mcrypt encrypted forms found.
+[2017-04-26 10:17:14] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) -------------------------------------------------------------
+[2017-04-26 10:17:14] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) Successfully completed migration.
+[2017-04-26 10:17:14] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) A total of 1 encrypted forms are migrated.
+[2017-04-26 10:17:14] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) No mcrypt encrypted forms found.
+[2017-04-26 10:32:34] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) -------------------------------------------------------------
+[2017-04-26 10:32:34] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) Successfully completed migration.
+[2017-04-26 10:32:34] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) A total of 1 encrypted forms are migrated.
+[2017-04-26 10:32:34] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 69) No mcrypt encrypted forms found.
+[2017-04-26 10:33:45] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) -------------------------------------------------------------
+[2017-04-26 10:33:45] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) Successfully completed migration.
+[2017-04-26 10:33:45] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) A total of 1 encrypted forms are migrated.
+[2017-04-26 10:33:45] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) No mcrypt encrypted forms found.
+[2017-04-26 10:48:29] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) -------------------------------------------------------------
+[2017-04-26 10:48:29] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) Successfully completed migration.
+[2017-04-26 10:48:29] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) A total of 1 encrypted forms are migrated.
+[2017-04-26 10:48:29] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) No mcrypt encrypted forms found.
+[2017-04-26 11:09:36] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) -------------------------------------------------------------
+[2017-04-26 11:09:36] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) Successfully completed migration.
+[2017-04-26 11:09:36] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) A total of 1 encrypted forms are migrated.
+[2017-04-26 11:09:36] (INFO @ /var/www/vhosts/modx-test/webroot/modx-extras/formit/core/components/formit/processors/mgr/form/migrate.class.php : 74) No mcrypt encrypted forms found.

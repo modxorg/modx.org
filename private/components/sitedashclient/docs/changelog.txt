@@ -1,0 +1,101 @@
+SiteDash Client 1.0.0-pl
+-------------------------
+Released on 2018-12-10
+
+- Downgrade symfony/process to 3.4.20 to support PHP 5.5.9+
+- Provide the server with the assets_url to automatically support non-standard assets directories
+- Backup process no longer depends on exec(), instead using proc_open (like upgrade) which has some wider server support
+
+SiteDash Client 1.0.0-rc4
+-------------------------
+Released on 2018-11-29
+
+- Try to automatically find the mysqldump executable before accepting the mysqldump_binary setting
+- If the php executable can't automatically be determined, use simply php and assume it's available
+- Check if the exec() function is available before trying the backup
+
+SiteDash Client 1.0.0-rc3
+-------------------------
+Released on 2018-11-28
+
+- Use Symfony/Process to run the setup for better security and stability
+- Increase download timeout from 15 to 90 seconds
+
+SiteDash Client 1.0.0-rc2
+-------------------------
+Released on 2018-11-27
+
+- Loosen shell escaping to prevent issues with complex passwords not working for the backup
+- Fix incorrect default for sitedashclient.php_binary setting
+- Fix upgrade on advanced distributions where the core folder has been moved or a custom config key is used
+
+SiteDash Client 1.0.0-rc1
+-------------------------
+Released on 2018-11-27
+
+- First beta version of upgrading the MODX core!
+- Make sure invalid requests still return a valid JSON response
+- Add file hasher to use for validating upgrades and for keeping an eye on files changing unexpectedly
+- Add backup command to create a local backup of the database and critical files
+- Settings for PHP and mysqldump binaries to use
+
+SiteDash Client 0.7.0-pl
+------------------------
+Released on 2018-08-02
+
+- Make sure that packages have their names normalised when being loaded to fix inconsistencies
+- Update default server url to the new SiteDash.app domain
+- Now also reports the core path, base url/path and connectors url/path
+
+SiteDash Client 0.6.0-pl
+------------------------
+Released on 2018-07-24
+
+- Public release. Can update itself, too!
+
+SiteDash Client 0.6.0-rc1
+------------------------
+Released on 2018-07-24
+
+- Implement remote package upgrades
+- Prevent E_WARN getting logged to the error log if disk_free_space or disk_total_space is in the disabled functions
+
+SiteDash Client 0.5.0-pl
+------------------------
+Released on 2018-05-29
+
+- Add session table health check to refresh
+- Add a repair table command to allow the session table, and others, to be remotely repaired from SiteDash
+- Add a database check that looks at all database tables for their status and used collations
+- Fix the namespace assets_path not being set correctly (even though that's not used anywhere)
+
+SiteDash Client 0.4.2-pl
+------------------------
+Released on 2018-02-28
+
+- Fix overwriting authentication on upgrade to 0.4.1 (only for installs from modx.com) [S16309]
+
+SiteDash Client 0.4.1-pl
+------------------------
+Released on 2018-02-25
+
+- Fix "core out of webroot" check causing false negatives.
+
+SiteDash Client 0.4.0-pl
+------------------------
+Released on 2017-11-22
+
+- Now supports downloading the error log contents
+- Client Version is now reported to SiteDash so it can detect what features are available
+
+SiteDash Client 0.3.1-pl
+------------------------
+Released on 2017-09-26
+
+- Now also includes the core folder if it isn't outside the webroot, so the server can check if it's protected when renamed
+
+SiteDash Client 0.3.0-pl
+------------------------
+Released on 2017-09-24
+
+- First packaged build

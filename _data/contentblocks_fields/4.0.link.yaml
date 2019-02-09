@@ -1,0 +1,13 @@
+id: 4
+parent_properties: ''
+input: link
+name: Button
+description: ''
+sortorder: 3
+category: 1
+icon: link
+template: "<p class=\"[[+alignment]] [[+margintop]] [[+marginbottom]]\">\n    <a href=\"[[+disabled:is=`disabled`:then=`#`:else=`[[+link]]`]]\" class=\"button [[+color]] [[+width]] [[+outline]] [[+disabled]]\" target=\"[[+link_target]]\"  rel=\"[[+link_target:is=`_blank`:then=`noopener noreferrer`:else=``]]\">\n        [[+title]]\n    </a>\n</p>"
+properties: '{"link_detection_pattern_override":"","limit_to_current_context":"0"}'
+availability: '[]'
+layouts: ''
+settings: '[{"reference":"link_target","title":"Linkziel","fieldtype":"select","default_value":"_self","fieldoptions":"_self==gleiches Fenster\n_blank==neues Fenster","field_is_exposed":"asField"},{"reference":"alignment","title":"Ausrichtung","fieldtype":"select","default_value":"text-left","fieldoptions":"text-left==links\ntext-center==zentriert\ntext-right==rechts","field_is_exposed":"modal"},{"reference":"color","title":"Farbe","fieldtype":"select","default_value":"","fieldoptions":"[[$cb-colorclasses? &classprefix=``]]","field_is_exposed":"modal","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":"","process_tags":"1"},{"reference":"outline","title":"Outline","fieldtype":"checkbox","default_value":"","fieldoptions":"outline==ja","field_is_exposed":"modal"},{"reference":"disabled","title":"Deaktiviert","fieldtype":"checkbox","default_value":"","fieldoptions":"disabled==ja","field_is_exposed":"modal"},{"reference":"title","title":"Button Label","fieldtype":"textfield","default_value":"","fieldoptions":"","field_is_exposed":"asField"},{"reference":"width","title":"Breite","fieldtype":"select","default_value":"","fieldoptions":"==Automatisch\nc-button--fullwidth==Volle Spaltenbreite","field_is_exposed":"modal","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"margintop","title":"Extra Abstand oben","fieldtype":"select","default_value":"","fieldoptions":"[[$cb-layout-extraclasses? &direction=`top`]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""},{"reference":"marginbottom","title":"Extra Abstand unten","fieldtype":"select","default_value":"u-no-margin--bottom","fieldoptions":"[[$cb-layout-extraclasses? &direction=`bottom`]]","field_is_exposed":"modal","process_tags":"1","image_source":"","image_directory":"","image_thumbnail_size":"","image_file_types":""}]'

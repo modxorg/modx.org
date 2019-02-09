@@ -1,0 +1,5 @@
+text: admin
+parent: usernav
+icon: '<i class="icon-gear icon icon-large"></i>'
+menuindex: 6
+permissions: settings

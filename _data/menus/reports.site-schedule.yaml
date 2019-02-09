@@ -1,0 +1,5 @@
+text: site_schedule
+parent: reports
+action: resource/site_schedule
+description: site_schedule_desc
+permissions: view_document

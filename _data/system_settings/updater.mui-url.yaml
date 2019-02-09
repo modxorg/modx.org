@@ -1,0 +1,4 @@
+key: updater.mui_url
+value: 'https://updater.modx.seda.digital/modx.mui.json'
+namespace: updater
+area: '(9) Managed Update Information'

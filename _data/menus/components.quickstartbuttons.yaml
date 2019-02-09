@@ -1,0 +1,7 @@
+text: quickstartbuttons
+parent: components
+action: '3'
+description: quickstartbuttons.menu_desc
+icon: images/icons/plugin.gif
+menuindex: 6
+permissions: dashboards

@@ -1,0 +1,8 @@
+id: 9
+template: 2
+label: 'E-Mail an Absender'
+name: tv_cbf_email_sender
+width: 30
+php_renderer: cbf_collection_snippet_renderer_email
+position: 3
+sort_type: null

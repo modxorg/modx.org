@@ -1,0 +1,3 @@
+name: sitedashclient
+path: '{core_path}components/sitedashclient/'
+assets_path: '{assets_path}components/sitedashclient/'

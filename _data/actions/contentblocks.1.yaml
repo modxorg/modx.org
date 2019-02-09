@@ -1,0 +1,4 @@
+id: 1
+namespace: contentblocks
+controller: index
+lang_topics: 'contentblocks:default'

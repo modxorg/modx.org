@@ -1,0 +1,4 @@
+key: manager_use_fullname
+value: '0'
+xtype: combo-boolean
+area: manager

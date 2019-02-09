@@ -1,0 +1,128 @@
+.gallery-image-holder {
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    zoom: 1;
+  }
+  li {
+    float: left;
+    max-width: 210px;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: relative;
+
+    .gallery-size-specified & {
+      max-width: none;
+
+      .contentblocks-field-gallery-image-view {
+        height: auto;
+      }
+    }
+
+    .gallery-size-small & {
+      max-width: 125px;
+      margin-right: 5px;
+      margin-top: 5px;
+
+      .contentblocks-field-gallery-image-view {
+        height: 100px;
+      }
+    }
+    .gallery-size-large & {
+      max-width: 300px;
+      margin-right: 15px;
+      margin-top: 15px;
+
+      .contentblocks-field-gallery-image-view {
+        height: 250px;
+      }
+    }
+  }
+}
+.contentblocks-field-gallery-image-view {
+  height: 150px;
+  overflow: hidden;
+  img {
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    min-height: 100%;
+    width: 100%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAF0lEQVR4AWP4DwVnoGCgBGAMmMQACQAA9CflgZrq8LsAAAAASUVORK5CYII=) repeat left top;
+  }
+}
+
+.contentblocks-field-gallery-uploading {
+  display: none;
+  .uploading & {
+    display: block;
+  }
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .upload-progress {
+    height: 20px;
+    width: 100%;
+
+    .bar {
+      height: 100%;
+      background: #008000;
+      width: 50%;
+    }
+  }
+}
+
+.contentblocks-gallery-image-actions {
+  display: none;
+  .contentblocks-field-gallery-image:hover &,
+  .contentblocks-field-gallery-image:focus & {
+    display: block;
+  }
+  .uploading & {
+    display: none !important;
+  }
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-align: right;
+  width: 100%;
+
+  a {
+  }
+}
+
+
+.contentblocks-gallery-placeholder {
+  height: 247px;
+  width: 210px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+  border: 1px dashed #CCC;
+  min-height: 100px;
+  background-color: #EFEFEF;
+}
+
+.no-description {
+  .contentblocks-gallery-placeholder {
+    height: 183px;
+  }
+  .contentblocks-field-gallery-image {
+    .description {
+      display: none;
+    }
+  }
+}
+
+.no-link-field {
+  .contentblocks-field-gallery-image {
+    .contentblocks-link-modal-trigger,
+    .contentblocks-field-link-input {
+      display: none !important;
+    }
+  }
+}

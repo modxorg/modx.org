@@ -1,0 +1,4 @@
+id: 114
+template: 1
+name: resourcegroup_delete
+description: perm.resourcegroup_delete_desc

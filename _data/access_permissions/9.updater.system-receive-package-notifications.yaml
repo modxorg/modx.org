@@ -1,0 +1,4 @@
+id: 257
+template: 9
+name: updater.system_receive_package_notifications
+description: updater.perm.system_receive_package_notifications

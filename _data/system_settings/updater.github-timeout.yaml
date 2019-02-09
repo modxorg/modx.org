@@ -1,0 +1,4 @@
+key: updater.github_timeout
+value: '1500'
+namespace: updater
+area: Cache

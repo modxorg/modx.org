@@ -1,0 +1,6 @@
+text: flush_sessions
+parent: manage
+description: flush_sessions_desc
+menuindex: 4
+handler: "MODx.msg.confirm({\n    title: _('flush_sessions')\n    ,text: _('flush_sessions_confirm')\n    ,url: MODx.config.connector_url\n    ,params: {\n        action: 'security/flush'\n    }\n    ,listeners: {\n        'success': {fn:function() { location.href = './'; },scope:this}\n    }\n});"
+permissions: flush_sessions

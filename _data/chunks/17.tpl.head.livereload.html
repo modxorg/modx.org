@@ -1,0 +1,9 @@
+id: 17
+name: tpl.head.livereload
+description: 'Injects the livereload javascript to the page.'
+category: Template
+properties: 'a:0:{}'
+
+-----
+
+[[++project.environment:is=`local`:then=`<script src="http://localhost:[[includeFile:default=`9092`? &file=`assets/templates/web/.livereload`]]/livereload.js?snipver=1"></script>`:else=``]]

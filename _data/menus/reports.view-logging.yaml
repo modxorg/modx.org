@@ -1,0 +1,6 @@
+text: view_logging
+parent: reports
+action: system/logs
+description: view_logging_desc
+menuindex: 1
+permissions: logs

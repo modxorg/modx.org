@@ -1,0 +1,6 @@
+text: remove_locks
+parent: manage
+description: remove_locks_desc
+menuindex: 2
+handler: 'MODx.removeLocks();return false;'
+permissions: remove_locks

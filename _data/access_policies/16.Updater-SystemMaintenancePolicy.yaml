@@ -1,0 +1,6 @@
+id: 16
+name: Updater_SystemMaintenancePolicy
+description: 'Policy for system maintenance tasks like showing updater widget and receiving notifications.'
+template: 9
+data: '{"system_perform_maintenance_tasks":true,"system_receive_core_notifications":true,"system_receive_package_notifications":true}'
+lexicon: 'updater:permissions'

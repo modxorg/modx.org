@@ -1,0 +1,263 @@
+# ----------------------------------------------------------------------
+#  UTF-8 everywhere
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats - This needs to be commented out on some hosting providers like: Domain Factory, and jweiland
+AddCharset utf-8 .atom .css .js .json .rss .vtt .webapp .xml
+
+
+
+# ----------------------------------------------------------------------
+# Enable Rewrite Engine
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+	Options +SymLinksIfOwnerMatch
+	Options -MultiViews
+	RewriteEngine On
+	RewriteBase /
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+# Domain Rewrites
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+
+    # Rewrite all non-project domains to the default one
+    #RewriteCond %{HTTP_HOST} .
+    #RewriteCond %{HTTP_HOST} !^project\.de [NC]
+    #RewriteCond %{HTTP_HOST} !^local.project\.de [NC]
+    #RewriteCond %{HTTP_HOST} !^develop.project\.de [NC]
+    #RewriteCond %{HTTP_HOST} !^staging.project\.de [NC]
+    #RewriteRule ^(.*)$ https://project.de/$1 [R=301,L,QSA]
+
+    # Force HTTPS (except local)
+    RewriteCond %{HTTP_HOST} .
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,QSA]
+
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Custom Routing Logic
+# ----------------------------------------------------------------------
+
+# Example: RewriteRule (.*)/seite-([0-9]+)$ index.php?q=$1/&seite=$2 [L,QSA]
+
+
+
+# ----------------------------------------------------------------------
+# JS/CSS/SVG Versioning
+# ----------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.([a-z0-9]+)?\.(svg|js|css)$ $1.$3
+
+
+
+# ----------------------------------------------------------------------
+# MODX Friendly URLs part
+# ----------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?q=$1 [L,QSA]
+
+
+
+# ----------------------------------------------------------------------
+#  Security
+# ----------------------------------------------------------------------
+
+# Disable server signature on error pages
+ServerSignature Off
+
+
+# "-Indexes" will have Apache block users from browsing folders without a default document
+# Usually you should leave this activated, because you shouldn't allow everybody to surf through
+# every folder on your server (which includes rather private places like CMS system folders).
+<IfModule mod_autoindex.c>
+	Options -Indexes
+</IfModule>
+
+
+# Block access to "hidden" directories whose names begin with a period. This
+# includes directories used by version control systems such as Subversion or Git.
+<IfModule mod_rewrite.c>
+    RewriteCond %{SCRIPT_FILENAME} -d
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+
+# Block access to htaccess and htpasswd files
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+	Order allow,deny
+    Deny from all
+    Satisfy all
+</Files>
+
+
+# Block access to backup and source files
+# This files may be left by some text/html editors and
+# pose a great security danger, when someone can access them
+<FilesMatch "\.(bak|config|sql|fla|psd|ini|log|sh|inc|~|swp)$">
+	Order allow,deny
+	Deny from all
+	Satisfy All
+</FilesMatch>
+
+
+<IfModule mod_headers.c>
+    # Remove some headers for security reasons (if those exist at all, this might not work...)
+    Header unset Server
+    Header unset X-Powered-By
+
+    # Allow iframe only on same origin
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+
+# Hide config.core.php files from browsers
+<IfModule mod_rewrite.c>
+    RewriteRule ".*/?config.core.php$" index.php?q=$1/config.core.php [L,QSA]
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+#  CORS for Assets
+# ----------------------------------------------------------------------
+
+# Send the CORS header for images when browsers request it.
+# https://developer.mozilla.org/en/CORS_Enabled_Image
+# http://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/
+
+<IfModule mod_setenvif.c>
+    <IfModule mod_headers.c>
+        <FilesMatch "\.(gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
+    </IfModule>
+</IfModule>
+
+
+# Allow access from all domains for web fonts and css
+<IfModule mod_headers.c>
+    <FilesMatch "\.(eot|otf|ttc|ttf|woff|css)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+#  expire headers
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	# Data interchange
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+    # Web feeds
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+	#css
+	ExpiresByType text/css                              "access plus 1 year"
+	#js
+	ExpiresByType application/javascript                "access plus 1 year"
+	ExpiresByType application/x-javascript              "access plus 1 year"
+	#images
+	ExpiresByType image/gif                             "access plus 1 year"
+	ExpiresByType image/jpeg                            "access plus 1 year"
+	ExpiresByType image/png                             "access plus 1 year"
+	ExpiresByType image/x-icon                          "access plus 1 year"
+	#webfonts
+	ExpiresByType application/x-font-ttf                "access plus 1 year"
+	ExpiresByType font/opentype                         "access plus 1 year"
+	ExpiresByType application/x-font-woff               "access plus 1 year"
+	ExpiresByType application/font-woff                 "access plus 1 year"
+	ExpiresByType image/svg+xml                         "access plus 1 year"
+	ExpiresByType application/vnd.ms-fontobject         "access plus 1 year"
+</IfModule>
+
+
+# Remove `ETags` as resources are sent with far-future expires headers.
+# https://developer.yahoo.com/performance/rules.html#etags
+# `FileETag None` doesn't work in all cases.
+<IfModule mod_headers.c>
+    Header unset ETag
+    FileETag None
+</IfModule>
+
+
+
+# ----------------------------------------------------------------------
+#  Compression
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled `Accept-Encoding` request headers
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # Compress all output labeled with one of the following media types.
+
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE "application/atom+xml" \
+                                      "application/javascript" \
+                                      "application/json" \
+                                      "application/ld+json" \
+                                      "application/manifest+json" \
+                                      "application/rdf+xml" \
+                                      "application/rss+xml" \
+                                      "application/schema+json" \
+                                      "application/vnd.geo+json" \
+                                      "application/vnd.ms-fontobject" \
+                                      "application/x-font-ttf" \
+                                      "application/x-javascript" \
+                                      "application/x-web-app-manifest+json" \
+                                      "application/xhtml+xml" \
+                                      "application/xml" \
+                                      "font/eot" \
+                                      "font/opentype" \
+                                      "image/bmp" \
+                                      "image/svg+xml" \
+                                      "image/vnd.microsoft.icon" \
+                                      "image/x-icon" \
+                                      "text/cache-manifest" \
+                                      "text/css" \
+                                      "text/html" \
+                                      "text/javascript" \
+                                      "text/plain" \
+                                      "text/vcard" \
+                                      "text/vnd.rim.location.xloc" \
+                                      "text/vtt" \
+                                      "text/x-component" \
+                                      "text/x-cross-domain-policy" \
+                                      "text/xml"
+
+    </IfModule>
+</IfModule>

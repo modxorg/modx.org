@@ -1,0 +1,5 @@
+id: 8
+template_group: 1
+name: ContentBlocksTemplate
+description: 'Policy Template for access to the ContentBlocks manager page.'
+lexicon: 'contentblocks:permissions'

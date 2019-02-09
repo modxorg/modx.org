@@ -1,0 +1,220 @@
+@import "variables";
+$wrapperBorder: 1px solid #CBCBCB;
+
+.contentblocks-wrapper, .contentblocks-wrapper *, #contentblocks-modal, #contentblocks-modal * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  // Make sure TinyMCE is displayed properly
+  .mceEditor, .mceEditor * {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    .mceLayout {
+      width: 100% !important;
+    }
+    .mceToolbar td {
+      float: left;
+    }
+  }
+  .redactor-toolbar li, .redactor-toolbar li a {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  // Fix list styles in Redactor
+  .redactor_editor {
+    ul {
+      list-style: disc;
+    }
+  }
+}
+
+.contentblocks-wrapper,
+#layout-switch-wrapper {
+  width: 100%;
+  border: $wrapperBorder;
+
+  &.modx_v23 {
+    border: none;
+  }
+
+  .contentblocks-fields-wrapper {
+    background-color: #DCDCDC;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+
+    h3 {
+      float: left;
+      font-size: 14px;
+      color: #777;
+      padding: 0 10px;
+      line-height: 35px;
+    }
+  }
+
+
+  .contentblocks-content-wrapper {
+    padding: 15px;
+
+    .contentblocks-content {
+      list-style-type: none;
+
+      li {
+
+      }
+    }
+  }
+
+  &:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    zoom: 1;
+  }
+}
+
+#contentblocks_loading {
+  text-align: center;
+  padding: 2em;
+  background-color: #FFFFFF;
+  border: 1px solid #CBCBCB;
+
+  &.modx_v23 {
+    border: none;
+  }
+}
+
+#contentblocks:not(.modx_v23) .icon-cog {
+  display: inline-block;
+  line-height: 1;
+  background: url('../img/cog_fa.svg') top no-repeat;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-bottom;
+  opacity: 0.6;
+}
+
+#contentblocks {
+  .linkDisplay {
+    display: block;
+    height: 33px;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 20px;
+    padding: 8px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    width: 100%;
+    position: relative;
+    background-color: #FBFBFB;
+    border: 1px solid #CCC;
+    font: normal 13px arial, tahoma, helvetica, sans-serif;
+    color: #AAA;
+    &.hasLink {
+      color: #000;
+      overflow: hidden;
+      &:before {
+        content: "\f0c1 ";
+        font-family: FontAwesome;
+        opacity: 0.6;
+        display: inline-block;
+        margin-right: .5em;
+      }
+      #contentblocks:not(.modx_v23) & {
+        display: inline-block;
+        line-height: 1;
+        content: "";
+        background: url('../img/cog_fa.svg') top no-repeat;
+        background-size: contain;
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+}
+
+@import "layouts";
+@import "modal";
+@import "cropper";
+@import "fields/general";
+@import "fields/code";
+@import "fields/file";
+@import "fields/gallery";
+@import "fields/heading";
+@import "fields/hr";
+@import "fields/image";
+@import "fields/layout";
+@import "fields/link";
+@import "fields/list";
+@import "fields/quote";
+@import "fields/repeater";
+@import "fields/snippet";
+@import "fields/table";
+@import "fields/video";
+@import "fields/chunk";
+@import "settings";
+@import "dropmenu";
+@import "template-builder";
+@import "powertip";
+@import "../js/vendor/tinyrte/tinyrte";
+
+
+// This fixes the styling on text inputs within ExtJS prompts. As there is no better target class this is hopefully
+// specific enough to prevent styling from bleeding into other ExtJS generated windows.
+.contentblocks_loaded .x-window-dlg .x-window-body .ext-mb-content .ext-mb-input {
+  line-height: 20px;
+  padding: 8px;
+
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+
+  display: block;
+  width: 100%;
+
+  position: relative;
+  background-color: #fbfbfb;
+  border: 1px solid #CCC;
+
+  font: normal 13px arial, tahoma, helvetica, sans-serif;
+}
+
+.modx_v30 {
+  &.contentblocks-wrapper {
+    &.position_inherit {
+      border: 1px solid #E4E4E4;
+      border-radius: 3px;
+      margin-top: 1.5rem;
+
+      > .contentblocks-layout-wrapper {
+        margin-top: 0;
+      }
+    }
+    &.position_tab1, &.position_tab2 {
+      > .contentblocks-layout-wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+}
+#contentblocks-block-panel-wrapper {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+  position: relative;
+
+  .x-panel-header {
+    padding: 15px;
+    color: #555;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 2px;
+  }
+}

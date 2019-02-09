@@ -1,0 +1,4 @@
+key: updater.send_version_digest_hours
+value: '720'
+namespace: updater
+area: '(4) Notifications: Digest'

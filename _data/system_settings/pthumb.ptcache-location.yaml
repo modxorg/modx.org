@@ -1,0 +1,4 @@
+key: pthumb.ptcache_location
+value: assets/thumbs/
+namespace: phpthumbof
+area: 'Cache [pThumb]'

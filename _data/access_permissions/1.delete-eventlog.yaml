@@ -1,0 +1,4 @@
+id: 21
+template: 1
+name: delete_eventlog
+description: perm.delete_eventlog_desc

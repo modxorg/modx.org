@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Componentname
+   ========================================================================== */
+
+/**
+ * componentname
+ * This is a description of the following block
+ */
+
+.c-componentname {
+    font-size: rem(16);
+}
+
+
+/**
+ * child
+ * This is a description of the following block
+ */
+
+ .c-componentname__child {
+    font-size: rem(14);
+}
+
+
+
+/* Variations
+   ========================================================================== */
+
+.c-componentname--green {
+    color: green;
+}

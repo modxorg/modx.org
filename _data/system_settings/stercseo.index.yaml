@@ -1,0 +1,5 @@
+key: stercseo.index
+value: '1'
+xtype: combo-boolean
+namespace: stercseo
+area: general

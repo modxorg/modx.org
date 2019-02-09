@@ -1,0 +1,5 @@
+text: users
+parent: manage
+action: security/user
+description: user_management_desc
+permissions: view_user

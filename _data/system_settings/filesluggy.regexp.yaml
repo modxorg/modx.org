@@ -1,0 +1,4 @@
+key: filesluggy.regexp
+value: '/[^\.A-Za-z0-9 _-]/'
+namespace: filesluggy
+area: fs_encoding

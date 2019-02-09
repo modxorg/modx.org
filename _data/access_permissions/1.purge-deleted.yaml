@@ -1,0 +1,4 @@
+id: 110
+template: 1
+name: purge_deleted
+description: perm.purge_deleted_desc

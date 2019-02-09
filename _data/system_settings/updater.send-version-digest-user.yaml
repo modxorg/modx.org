@@ -1,0 +1,4 @@
+key: updater.send_version_digest_user
+xtype: combo-boolean
+namespace: updater
+area: '(4) Notifications: Digest'

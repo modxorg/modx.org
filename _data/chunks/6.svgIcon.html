@@ -1,0 +1,9 @@
+id: 6
+source: 2
+name: svgIcon
+description: 'Include a svg icon. Example: [[$svgIcon? &icon=`help` &classes=`icon--help`]]'
+properties: 'a:0:{}'
+
+-----
+
+<svg role="presentation" [[+classes:notempty=`class="[[+classes]]"`]]><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="[[checksumFile? &file=`[[++project.assets_url]]dist/sprite.svg`]]#[[+icon]]" href="[[checksumFile? &file=`[[++project.assets_url]]dist/sprite.svg`]]#[[+icon]]"></use></svg>

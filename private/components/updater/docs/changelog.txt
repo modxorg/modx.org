@@ -1,0 +1,162 @@
+UPDATER - the universal update notifier
+======================================================
+
+0.4.1-beta4  (20170407)
+-------------------------
++ show Managed Update Information (MUI) from SEDA.digital
++ added policy and policy template to updater installation
++ if multiple consecutive core versions are found, show only first and last in widget with dots between
+- fixed warning message on cache clear (not necessary and confusing in gitify & co)
+- Namespaced some CSS to avoid collisions with moregallery
+- removed spinner in favour of CSS animations
+- Scrollable packages list container for more than 4 available package updates
+
+
+0.3.10-beta  (20160406)
+-------------------------
+- refixed recoverable error in log (thanks @sottwell)
+- fix: changed download protocols to https
+
+0.3.9-beta  (20160405)
+------------------------
+- fix showing update available if the only possible update has been filtered out
+- fix recoverable error in log (thanks @sottwell)
+- add clear cache event to clear also updater's internal cache (not only on package changes)
+- fixed missing lexicon entries
+- changed lexicon to namespaced lexicon
+- fixed bug with caching lexicon entries and log messages
+- compressed inline css
+
+0.3.8-beta (20160303)
+------------------------
+- minor changes in build process
+- check for multiple available versions
+- setting and behaviour to filter available versions (e.g. only stable versions). Filters for release level
+  and version level are available.
+- fix link to release notes/changelog, target to 2.x branch
+
+0.3.7-beta  (20160107)
+------------------------
+- fixed missing button tooltips and translations
+- fixed possible non-object fatal error on some systems (thanks to @jako, @flo and @sottwell)
+- changed path for cron timestamp file to cache location
+- fixed jquery version problems (missing functions in jquery 1.6, now forces Jquery 2, thanks to @jako)
+- added updater.debug setting to installation
+
+0.3.6-beta  (20160101)
+------------------------
+- added dynamic refresh of core status in the widget (no waiting after first login)
+- added dynamic refresh of packages status in the widget (no waiting after first login)
+- added style for widget in half and full mode
+- added automatic stale refresh _after_ manager login with visualization
+- added useful debug log for failed github connections
+- added cronlike script to inject non-blocking ajax calls for refreshing and notification
+- added custom events
+- changed widget css to flexbox
+- fixed style of packages list in widget (now with icons)
+- added curl error message output to widget
+- a lot of code refactoring
+
+NOTE: Updater has some issues with PHP 5.2.x versions - please do not install it in such environments (anyway, as this php version was discontinued in 2011, you should strongly consider to update your environment!)
+
+
+0.2.13-beta
+------------------------
+- fix: github curiosity not reporting latest version first
+
+0.2.12-beta
+------------------------
+- changed plugins to non-static in order to fix open basedir bug
+- deactived Broadcast plugin until more functionality available
+
+0.2.11-beta
+------------------------
+- added cache observer to refresh state after package changes
+- fixed some tiny bugs
+
+0.2.10-beta
+------------------------
+- changed notifier event to OnWebPageComplete to decrease impact on page loading time [EXPERIMENTAL]
+- fixed critical bug when github api only returns unusable message
+- fixed widget warning when on dev-branch/github
+- adjusted colors
+- list every package in notifications in one line
+
+0.2.7-beta
+------------------------
+- fix: try to prevent errors in plugin notifier
+- fix: bug in package notification mail template
+- several micro-fixes
+
+0.2.6-beta
+------------------------
+- changed mail icon to svg
+- removed base64 inlining of icon (nice idea, but blocked by many clients)
+- send notification regardless of content in debug mode
+- reduced notifications default time to 8h
+- fix: change notifier event to OnWebPageInit to prevent severe login problems at manager login
+
++++++++++++++++++++++++++++++++
+IMPORTANT: there was a severe bug up to version 0.2.4-beta, which prevents users from log in the manager ("permission denied" regardless of user permissions). This should be fixed from 0.2.7-beta on.
+If you encounter this problem, you have to manually deactivate the plugin "Updater notifier" via the database (instructions and further information can be found at http://forums.modx.com/thread/?thread=96613&page=2).
+If you still have this problem with version 0.2.7+, please write to modx-updater@seda.digital or post your problem at the forum thread.
++++++++++++++++++++++++++++++++
+
+0.2.4-beta
+------------------------
+- included core notification mails
+
+0.2.3-beta
+------------------------
+- log notify only if updater.debug is set to true
+- changed some language strings
+- changed and split up settings areas
+- fixed sending on empty last-send timestamp
+- beautified html mail templates
+
+0.2.2-beta
+------------------------
+- fixed various bugs with package notification
+- fixed overwrite of settings when updating package
+
+0.2.1-beta
+------------------------
+- fixed some minor bugs with sending
+- changed debug messages
+
+0.2.0-beta
+------------------------
+- add system settings to manage mail notification
+- add routine to send version digest on a regular base
+- split up into 2 plugins to handle different situations
+- add system setting "updater.mail_format_html" (default: false)
+- add routine to send package information to admins
+- add routine to send core information to admins
+- fixed bug with multiple Mails on browser start
+
+0.1.6-alpha
+------------------------
+- added german translations for settings
+- changed widget design for installable packages (not red any more)
+- added lexicons for widget texts in english and german
+- fixed annoying "lexicon not found" bug by calling parser->processelementtags in advance
+- added sudo check for widget display
+- added 'system_perform_maintenance_tasks' permission for widget display
+- permissions are evaluated for showing broadcast message
+
+0.1.5-alpha
+------------------------
+- fixed bug with total number of packages
+- take package update refresh setting from core into account
+- added english lexicon
+- fixed problems with cache
+- adjusted css styling for less striking style
+- fixed bug with broadcast message
+
+0.1.4-alpha
+------------------------
+- initial restricted audience release
+
+Known Bugs
+----------------------------------
+- Problems with PHP 5.2 - but this is also not recommended for MODx, so please update your PHP!

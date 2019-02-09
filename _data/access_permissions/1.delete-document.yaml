@@ -1,0 +1,4 @@
+id: 20
+template: 1
+name: delete_document
+description: perm.delete_document_desc

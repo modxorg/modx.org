@@ -1,0 +1,4 @@
+id: 101
+template: 1
+name: policy_view
+description: perm.policy_view_desc

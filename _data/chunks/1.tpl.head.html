@@ -1,0 +1,84 @@
+id: 1
+name: tpl.head
+description: ''
+category: Template
+properties: 'a:0:{}'
+
+-----
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>[[+seoPro.title:htmlspecial]]</title>
+        [[*description:notempty=`<meta name="description" content="[[*description:htmlspecial]]">`]]
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="[[++project.environment:is=`production`:then=`[[+seoTab.robotsTag:default=`noopd,noydir`]]`:else=`noindex, nofollow`]]">
+        <meta name="application-name" content="[[++site_name:htmlspecial]]">
+        <meta name="format-detection" content="telephone=no">
+        
+        <meta property="og:title" content="[[*longtitle:htmlspecial]]">
+        [[*description:notempty=`<meta property="og:description" content="[[*description:htmlspecial]]">`]]
+        <meta property="og:site_name" content="[[++site_name:htmlspecial]]">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="[[++locale]]">
+        [[*image:notempty=`
+        <meta property="og:image" content="[[*image:pthumb=`w=1200&h=630&zc=c&f=jpg&q=80`]]">
+        <meta property="og:image:alt" content="[[*longtitle:htmlspecial]]">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        `]]
+        
+        <meta name="twitter:card" content="summary">
+        [[-<meta name="twitter:site" content="@">]]
+        <meta name="twitter:title" content="[[*longtitle:htmlspecial]]">
+        [[*description:notempty=`<meta name="twitter:description" content="[[*description:htmlspecial]]">`]]
+        <meta name="twitter:image" content="[[*image:pthumb=`w=1200&h=630&zc=c&f=jpg&q=80`]]">
+        
+        [[- <meta name="google-site-verification" content=""> ]]
+        [[-<link rel="canonical" href="[[!+page.canonical:default=`[[~[[*id]]? &scheme=`full`]]`]]">]]
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0087c1">
+        <meta name="msapplication-TileColor" content="#0087c1">
+        <meta name="theme-color" content="#ffffff">
+        
+        [[- use preconntect (and dns-prefetch as fallback) for any external domains
+        <link rel="preconnect" href="https://api.project.com" crossorigin>
+        <link rel="dns-prefetch" href="https://api.project.com">]]
+        <link href="[[checksumFile? &file=`[[++project.assets_url]]dist/main.css`]]" rel="stylesheet">
+        [[-<link href="https://fonts.googleapis.com/css?family=Montserrat:800|Ubuntu:400,400i,700" rel="stylesheet">]]
+
+        [[- async scripts load async during page load and block html parsing while executing
+            defer scripts load async during page load and are executing after html parsing
+        ]]
+        <script async src="[[checksumFile? &file=`[[++project.assets_url]]dist/head-modern.js`]]" type="module"></script>
+        <script async src="[[checksumFile? &file=`[[++project.assets_url]]dist/head-legacy.js`]]" nomodule></script>
+[[-
+        <script defer src="[[checksumFile? &file=`[[++project.assets_url]]dist/main-modern.js`]]" type="module"></script>
+        <script defer src="[[checksumFile? &file=`[[++project.assets_url]]dist/main-legacy.js`]]" nomodule></script>
+        <script>
+            window.siteconfig = {
+                assets_url: '[[++project.assets_url]]',
+                assets_version: [[!++project.assets_version]]
+            };
+            
+            [[- Google Analytics integration ]]
+        [[-
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=true;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-XXXXXXXX-1');
+            ga('set', 'anonymizeIp', true);
+            ga('send', 'pageview');
+        ]]
+        </script>
+]]
+
+        [[$tpl.head.livereload]]
+    
+    </head>

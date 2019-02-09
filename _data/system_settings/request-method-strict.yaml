@@ -1,0 +1,4 @@
+key: request_method_strict
+value: '1'
+xtype: combo-boolean
+area: gateway

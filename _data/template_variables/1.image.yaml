@@ -1,0 +1,14 @@
+id: 1
+source: 2
+type: image
+name: image
+caption: Seitengrafik
+description: 'wird u.a. für Social Media genutzt'
+category: Template
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
+content: ''

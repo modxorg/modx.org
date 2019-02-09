@@ -1,0 +1,4 @@
+key: signupemail_message
+value: "<p>Hallo,</p>\n    <p>hier sind Ihre Logindaten für den [[+sname]] MODX Manager:</p>\n\n    <p>\n        <strong>Benutzername:</strong> [[+uid]]<br />\n        <strong>Passwort:</strong> [[+pwd]]<br />\n    </p>\n\n    <p>Nachdem Sie sich in den Manager unter [[+surl]] eingeloggt haben, können Sie Ihr Passwort beliebig ändern. Klicken Sie dazu rechts oben auf Ihren Benutzernamen.</p>\n\n<p><small>Diese E-Mail wurde automatisch generiert.</small></p>\n"
+xtype: textarea
+area: authentication

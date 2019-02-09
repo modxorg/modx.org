@@ -1,0 +1,54 @@
+Changelog for Wayfinder (for Revolution).
+
+Wayfinder 2.3.3
+====================================
+- [#40] Add wf.level placeholder to items for showing current depth
+- [#42] Allow authenticated mgr users with view_unpublished to use new previewUnpublished property to preview unpublished Resources in menus
+- [#41] Fix issue with Wayfinder and truncated result sets due to getIterator call
+
+Wayfinder 2.3.2
+====================================
+- [#36] Fix issue with multiple Wayfinder calls using &config
+- [#35] Fix issues with TV bindings rendering
+- Add "protected" placeholder that is 1 if Resource is protected by a Resource Group
+- Updated documentation, snippet properties descriptions
+
+Wayfinder 2.3.1
+====================================
+- [#31] Add &scheme property for specifying link schemes
+- [#27] Improve caching in Wayfinder to store cache files in resource cache so cache is synced with modx core caching
+
+Wayfinder 2.3.0
+====================================
+- [#14] Fix issue with hideSubMenus when using it with a non-zero startId
+- Add all fields of a Resource to the rowTpl placeholder set, such as menutitle, published, etc
+- Properly optimize TV value grabbing to properly parse and cache TVs to improve load times when using TVs in a result set
+- Ensure that caching also caches by user ID to persist access permissions through cached result sets
+
+Wayfinder 2.2.0
+====================================
+- [#23] Fix issue that generated error message in error.log due to &contexts always being processed regardless of empty state
+- [#21] Fix issue with unnecessary groupby that was breaking sorting in older mysql versions
+- [#22] Add &cacheResults parameter, which caches queries for faster loading
+- [#8] Add &contexts parameter, and &startIdContext parameter if navigating across multiple contexts and using a non-0 &startId
+
+Wayfinder 2.1.3
+====================================
+- [#14] Fix hideSubMenus property
+- Add templates parameter that accepts a comma-delimited list of template IDs to filter by
+- Add where parameter that accepts a JSON object for where conditions
+- Add hereId parameter for specifying the active location
+
+Wayfinder 2.1.2
+====================================
+- Fixed bug with includeDocs parameter
+
+Wayfinder 2.1.1
+====================================
+- Wayfinder now properly uses MODx parsing system
+- Fixed issue with includeDocs statement
+- Fixed issues with PDO statements
+- Added the missing permissions check
+- Added wayfinder parameter "permissions" - default to "list", empty to bypass permissions check
+- [#WAYFINDER-20] TemplateVariables not rendering in Wayfinder templates.
+- Added changelog.

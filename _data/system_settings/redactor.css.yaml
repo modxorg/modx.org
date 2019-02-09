@@ -1,0 +1,4 @@
+key: redactor.css
+value: /assets/templates/web/dist/editor.css
+namespace: redactor
+area: Advanced

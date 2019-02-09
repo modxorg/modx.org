@@ -1,0 +1,4 @@
+key: updater.cache_expires_packages
+value: '43200'
+namespace: updater
+area: Cache

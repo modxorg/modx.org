@@ -1,0 +1,71 @@
+{
+    "mui_version":"0.1.0",
+    "date":"20170328",
+    "type":"cms",
+    "flavour":"modx",
+    "changelog": "https://raw.githubusercontent.com/modxcms/revolution/v2.5.6-pl/core/docs/changelog.txt",
+    "updates": {
+        "core": {
+            "2.5.6-pl": {
+                "issues": 35,
+                "release_date": "20170328",
+                "security": {
+                    "state": false
+                },
+                "breaking_change": false,
+                "annoying_mgr_bug": false,
+                "performance_improvements": true
+            },
+            "2.5.5-pl": {
+                "issues": 13,
+                "release_date": "20170209",
+                "security": {
+                    "state": false,
+                    "comment": []
+                },
+                "security_setup": {
+                    "state": true,
+                    "comments": ["Address various potential security issues in setup"],
+                    "github": [
+                        "13261"
+                    ]
+                },
+                "breaking_change": false,
+                "annoying_mgr_bug": false,
+                "performance_improvements": false
+            },
+            "2.5.4-pl": {
+                "issues": 1
+            },
+            "2.5.3-pl": {
+                "issues": 14,
+                "release_date": "20170105",
+                "security": {
+                    "state": true,
+                    "comment": ["PHPMailer updated"],
+                    "cve":["CVE-2016-10045"]
+                }
+            },
+            "2.5.2-pl": {
+                "issues": 22,
+                "security": {
+                    "state": true,
+                    "comment": ["Critical security updates included."]
+                }
+            },
+            "2.5.1-pl": {
+                "issues": 44
+            },
+            "2.5.0-pl": {
+                "issues": 2
+            },
+            "2.5.0-rc2": {
+                "issues": 9
+            },
+            "2.5.0-rc1": {
+                "issues": 41
+            }
+        },
+        "components": []
+    }
+}

@@ -1,0 +1,4 @@
+key: updater.send_package_notifications_user
+xtype: combo-boolean
+namespace: updater
+area: '(3) Notifications: Packages'

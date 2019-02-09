@@ -1,0 +1,6 @@
+text: namespaces
+parent: admin
+action: workspaces/namespace
+description: namespaces_desc
+menuindex: 8
+permissions: namespaces

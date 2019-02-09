@@ -1,0 +1,331 @@
+name: kickstart
+data_directory: _data/
+backup_directory: _backups/
+data:
+  contexts:
+    class: modContext
+    primary: key
+  contexts_access:
+    class: modAccessContext
+    primary: [id,target,principal]
+  context_settings:
+    class: modContextSetting
+    primary: [context_key, key]
+    exclude_keys:
+      - editedon
+    where:
+      - 'key:!=': http_host
+      - 'key:!=': site_url
+      - 'key:!=': base_url
+      - 'key:!=': server_protocol
+      - 'key:!=': http_host_aliases
+  system_settings:
+    class: modSystemSetting
+    primary: key
+    exclude_keys:
+      - editedon
+    where:
+      - 'key:!=': project.environment
+      - 'key:!=': project.assets_version
+      - 'key:!=': project.cachebust
+      - 'key:!=': http_host
+      - 'key:!=': site_url
+      - 'key:!=': mail_smtp_port
+      - 'key:!=': mail_smtp_hosts
+      - 'key:!=': mail_use_smtp
+  content_types:
+    class: modContentType
+    primary: [id,name]
+  contents:
+    type: content
+    exclude_keys:
+      - createdby
+      - createdon
+      - editedby
+      - editedon
+  categories:
+    class: modCategory
+    primary: [id,parent,category]
+  property_sets:
+    class: modPropertySet
+    primary: [id,name]
+  templates:
+    class: modTemplate
+    primary: [id,templatename]
+  template_variables:
+    class: modTemplateVar
+    primary: [id,name]
+  template_variables_access:
+    class: modTemplateVarTemplate
+    primary: [tmplvarid, templateid]
+  chunks:
+    class: modChunk
+    primary: [id,name]
+    extension: .html
+  snippets:
+    class: modSnippet
+    primary: [id,name]
+    extension: .php
+  plugins:
+    class: modPlugin
+    primary: [id,name]
+    extension: .php
+  plugin_events:
+    class: modPluginEvent
+    primary: [pluginid, event]
+  actions:
+    class: modAction
+    primary: [namespace, id]
+  menus:
+    class: modMenu
+    primary: [parent,text]
+
+  users:
+    class: modUser
+    primary: [id,username]
+    exclude_keys:
+      - createdon
+      - session_stale
+  user_profiles:
+    class: modUserProfile
+    primary: internalKey
+    exclude_keys:
+      - sessionid
+      - thislogin
+      - lastlogin
+      - logincount
+      - failedloginattempts
+  user_groups:
+    class: modUserGroup
+    primary: [id,name]
+  user_group_members:
+    class: modUserGroupMember
+    primary: [id,user_group,member]
+  user_group_roles:
+    class: modUserGroupRole
+    primary: [id,name]
+  access_permissions:
+    class: modAccessPermission
+    primary: [template,name]
+  access_policy_templates:
+    class: modAccessPolicyTemplate
+    primary: [id,name]
+  access_policies:
+    class: modAccessPolicy
+    primary: [id,name]
+  access_policy_template_groups:
+    class: modAccessPolicyTemplateGroup
+    primary: [id,name]
+
+  events:
+    class: modEvent
+    primary: name
+  namespaces:
+    class: modNamespace
+    primary: name
+  mediasources:
+    class: modMediaSource
+    primary: id
+  mediasource_elements:
+    class: sources.modMediaSourceElement
+    primary: [source, object_class, object, context_key]
+  mediasource_access:
+    class: sources.modAccessMediaSource
+    primary: [id,target,principal]
+  extension_packages:
+    class: modExtensionPackage
+    primary: namespace
+
+  lexicon:
+    class: modLexiconEntry
+    primary: [language,name]
+
+  form_customization_sets:
+    class: modFormCustomizationSet
+    primary: [id,profile,action,template]
+  form_customization_profiles:
+    class: modFormCustomizationProfile
+    primary: [id,name]
+  form_customization_profile_usergoups:
+    class: modFormCustomizationProfileUserGroup
+    primary: [usergroup, profile]
+  form_customization_action_doms:
+    class: modActionDom
+    primary: [set, name]
+
+  dashboards:
+    class: modDashboard
+    primary: [id, name]
+  dashboard_widgts:
+    class: modDashboardWidget
+    primary: id
+  dashboard_widget_placements:
+    class: modDashboardWidgetPlacement
+    primary: [dashboard, widget]
+
+  packages:
+    class: transport.modTransportPackage
+    primary: signature
+    exclude_keys:
+      - updated
+
+  quickstartbuttons_sets:
+    class: qsbSet
+    primary: [id,name]
+    package: quickstartbuttons
+  quickstartbuttons_set_usergroups:
+    class: qsbSetUserGroup
+    primary: [usergroup, set]
+  quickstartbuttons_icons:
+    class: qsbIcon
+    primary: name
+  quickstartbuttons_buttons:
+    class: qsbButton
+    primary: [id,text]
+
+
+#  scheduler_tasks:
+#    class: sTask
+#    primary: [namespace, reference]
+#    package: scheduler
+
+
+#  migx_formtabs:
+#    class: migxFormtab
+#    primary: id
+#    package: migx
+#  migx_formtab_fields:
+#    class: migxFormtabField
+#    primary: id
+#  migx_config_elements:
+#    class: migxConfigElement
+#    primary: id
+#  migx_elements:
+#    class: migxElement
+#    primary: id
+#  migx_configs:
+#    class: migxConfig
+#    primary: id
+
+
+  contentblocks_categories:
+    package: contentblocks
+    class: cbCategory
+    primary: [id,name]
+  contentblocks_fields:
+    package: contentblocks
+    class: cbField
+    primary: [id,parent,input]
+  contentblocks_layouts:
+    package: contentblocks
+    class: cbLayout
+    primary: [id,name]
+  contentblocks_templates:
+    package: contentblocks
+    class: cbTemplate
+    primary: [id,name]
+  contentblocks_defaults:
+    package: contentblocks
+    class: cbDefault
+    primary: id
+
+
+  clientconfig_groups:
+    class: cgGroup
+    primary: [id,label]
+    package: clientconfig
+  clientconfig_settings:
+    class: cgSetting
+    primary: [id,key]
+
+
+#  moregallery_images:
+#    class: mgImage
+#    primary: [resource, id]
+#    package: moregallery
+#    exclude_keys:
+#      - editedon
+#      - mgr_thumb_path
+#      - file_url
+#      - file_path
+#      - view_url
+#  moregallery_image_tags:
+#    class: mgImageTag
+#    primary: id
+#  moregallery_image_crops:
+#    class: mgImageCrop
+#    primary: id
+#  moregallery_tags:
+#    class: mgTag
+#    primary: display
+
+
+  collections_settings:
+    class: CollectionSetting
+    primary: id
+    package: collections
+  collections_templates:
+    class: CollectionTemplate
+    primary: [id, name]
+  collections_templatecolumns:
+    class: CollectionTemplateColumn
+    primary: id
+  collections_resourcetemplates:
+    class: CollectionResourceTemplate
+    primary: [resource_template, collection_template]
+  collections_selections:
+    class: CollectionSelection
+    primary: [resource, collection]
+
+
+#  inputoption_groups:
+#    class: SetInputOptionsGroup
+#    primary: [id, name]
+#    package: setinputoptions
+#  inputoption_options:
+#    class: SetInputOptionsInputOption
+#    primary: [group, id]
+
+
+#  tagger_groups:
+#    package: tagger
+#    class: TaggerGroup
+#    primary: [id, alias]
+#  tagger_tags:
+#    class: TaggerTag
+#    primary: id
+
+
+packages:
+  modx.com:
+    service_url: http://rest.modx.com/extras/
+    packages:
+      - ace
+      - collections
+      - getresources
+      - fastfield
+      - getcache
+      - getpage
+      - translit
+      - wayfinder
+      - formit
+      - updater
+      - locker
+      - setinputoptions
+      - pthumb
+      - redirectoid
+      - migx
+      - seopro
+      - seotab
+      - tagger
+  modmore.com:
+    service_url: https://rest.modmore.com/
+    username: chsmedien_kickstart
+    api_key: bhrlm59xfktyeksvqp3l99f3a6lvmt
+    packages:
+      - scheduler
+      - quickstartbuttons
+      - clientconfig
+      - redactor
+      - contentblocks
+      - moregallery

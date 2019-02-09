@@ -1,0 +1,4 @@
+key: updater.repeat_notifications_hours
+value: '72'
+namespace: updater
+area: '(1) Notifications: General'

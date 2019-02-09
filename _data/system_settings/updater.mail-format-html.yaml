@@ -1,0 +1,4 @@
+key: updater.mail_format_html
+xtype: combo-boolean
+namespace: updater
+area: '(1) Notifications: General'

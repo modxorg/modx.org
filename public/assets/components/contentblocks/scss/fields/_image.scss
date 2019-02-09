@@ -1,0 +1,108 @@
+.contentblocks-field-delete-image, .contentblocks-field-image-uploading, .contentblocks-field-image-preview, .contentblocks-field-image-title {
+  display: none;
+}
+
+.uploading {
+  .contentblocks-field-image-upload, .contentblocks-field-delete-image {
+    display: none;
+  }
+  .contentblocks-field-image-uploading, .contentblocks-field-image-preview {
+    display: block;
+  }
+}
+
+.preview {
+  .contentblocks-field-image-upload, .contentblocks-field-image-uploading {
+    display: none;
+  }
+  .contentblocks-field-delete-image {
+    display: inline-block;
+  }
+  .contentblocks-field-image-preview {
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  .contentblocks-field-crop-image {
+    display: initial;
+  }
+  .contentblocks-field-image-title {
+    display: block;
+  }
+}
+.contentblocks-field-crop-image {
+  display: none;
+}
+
+.contentblocks-field-image-upload {
+  width: 100%;
+}
+.contentblocks-field-image-uploading {
+  display: none;
+
+  .upload-progress {
+    height: 20px;
+    width: 100%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #CCC;
+
+    .bar {
+      height: 100%;
+      background: #008000;
+      width: 50%;
+    }
+  }
+}
+
+.contentblocks-field-upload-field {
+  display: none;
+}
+
+.contentblocks-field-image-preview {
+  img {
+    max-width: 100%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAF0lEQVR4AWP4DwVnoGCgBGAMmMQACQAA9CflgZrq8LsAAAAASUVORK5CYII=) repeat left top;
+  }
+}
+.contentblocks-field-image:hover .contentblocks-field-image-crop-previews {
+  bottom: 2.3em;
+}
+.contentblocks-field-image-crop-previews {
+  list-style-type: none;
+  display: flex;
+  overflow-x: scroll;
+  position: absolute;
+  bottom: -150px;
+  left: 2em;
+  right: 2em;
+  transition: all 0.5s;
+  li {
+    height: 100px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.9);
+    margin: 0 1em 0 0;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+    }
+    p {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: #333;
+      position: absolute;
+      bottom: -100%;
+      text-align: center;
+      width: 100%;
+      padding: 0.25em 0.5em;
+      transition: all 0.3s ease;
+    }
+    &:hover p {
+      bottom: 0;
+    }
+  }
+}

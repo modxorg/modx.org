@@ -1,0 +1,5 @@
+text: preview
+parent: site
+description: preview_desc
+menuindex: 4
+handler: 'MODx.preview(); return false;'

@@ -1,0 +1,3 @@
+name: filesluggy
+path: '{core_path}components/filesluggy/'
+assets_path: '{assets_path}components/filesluggy/'

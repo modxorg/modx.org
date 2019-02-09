@@ -1,0 +1,6 @@
+text: content_types
+parent: site
+action: system/contenttype
+description: content_types_desc
+menuindex: 8
+permissions: content_types

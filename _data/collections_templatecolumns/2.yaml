@@ -1,0 +1,9 @@
+id: 2
+template: 1
+label: publishedon
+name: publishedon
+sortable: 1
+width: 40
+renderer: Collections.renderer.datetimeTwoLines
+position: 1
+sort_type: null

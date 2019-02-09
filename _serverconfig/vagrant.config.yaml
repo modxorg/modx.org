@@ -1,0 +1,97 @@
+---
+# configuration file for the vagrant setup of local development settings
+configuration:
+    # the config section to use here. You can add individual
+    # environments below 'local' and set to use them here, e.g. if you
+    # need different mem sizes for your hardware
+
+    use: 'local'
+    # configure the local environment
+    # entries can left empty to get the defaults but have to exist
+    local:
+        version: '0.3.1'
+
+        comment: 'MODX.org'
+        warning: ''
+
+        vm:
+            name:   'modx.org'   # REQUIRED - please customize per project
+            box:    # DEFAULT: ubuntu/xenial64
+            memory: # DEFAULT: 4096
+            cpu:    # DEFAULT: 2
+        # you need to add the host.name and ips.public to your hosts' host file to access them with
+        # this name in your host browser
+        host:
+            name:   'local.modx.org'  # REQUIRED
+        ips:
+            public: 192.168.60.38
+        ports:
+            web: 60038     # DEFAULT 60000
+            ssh:  22038    # DEFAULT 22000
+            mysql: 63338        # DEFAULT 63306
+            livereload: 9038 # DEFAULT 9092
+            mailhog: 8038  # DEFAULT 8025
+        settings:
+            context:
+                key: 'web'
+
+        # check that the following config files are available and output a warning if not
+        configuration:
+            key: 'modx'
+            files:
+                -
+                    type: "MODX Configuration"
+                    path: "private/config/modx.inc.php"
+
+        modx_objects:
+            modSystemSetting:
+                -
+                    key: 'mail_smtp_hosts'
+                    value: '127.0.0.1'
+                    area: 'mail'
+                -
+                    key: 'mail_smtp_port'
+                    value: '1025'
+                    area: 'mail'
+                -
+                    key: 'mail_use_smtp'
+                    value: '1'
+                    xtype: 'combo-boolean'
+                    area: 'mail'
+                -
+                    key: 'error_log_filename'
+                    value: 'modx.log'
+                    area: 'system'
+                -
+                    key: 'error_log_filepath'
+                    value: '{core_path}logs/'
+                    area: 'system'
+
+            modContextSetting:
+
+        folders:
+            modx:
+                private:
+                    host: # DEFAULT: private
+                    guest: # DEFAULT: /vagrant/private/
+                public:
+                    host: # DEFAULT: public
+                    guest: # DEFAULT: /vagrant/public/
+            log:
+                host: # DEFAULT: private/logs
+                guest: # DEFAUKT /vagrant/private/logs
+        software:
+            additional_packages: ''
+            mysql:
+                mode: 'NO_ENGINE_SUBSTITUTION' # if not set, defaults for mysql >= 5.7 will fail with modx invalid timestamps a la 0000-00-00 00:00:00
+            apache:
+                version: # unused, default version
+                additional_mod: # e.g. setenvif
+
+            # new in kickstart 0.2: choose from:
+            #   - 5.6 (tested with trusty/64 - make sure to enable mcrypt)
+            #   - 7.0 (tested with xenial/64 - make sure to enable mcrypt)
+            #   - 7.1 (tested with xenial/64 - make sure to enable mcrypt)
+            #   - 7.2 (untested - make sure to remove mcrypt)
+            #   - 7.3 (tested - make sure to remove mcrypt)
+            php:    '7.3'

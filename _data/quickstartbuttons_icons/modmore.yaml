@@ -1,0 +1,5 @@
+id: 370
+name: modmore
+class: icon-modmore
+path: '[[++assets_url]]components/quickstartbuttons/icons/modmore.png'
+preset: 1

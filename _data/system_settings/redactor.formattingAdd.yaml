@@ -1,0 +1,5 @@
+key: redactor.formattingAdd
+value: '[{"title":"Formatierung zurücksetzen","func":"inline.removeFormat"},{"title":"Absatztext","tag":"p","clear":true},{"title":"Leadtext","tag":"p","class":"c-lead"},{"title":"Text (Primärfarbe)","class":"u-color--primary"},{"title":"Text (Sekundärfarbe)","class":"u-color--secondary"},{"title":"Text (Tertiärfarbe)","class":"u-color--tertiary"},{"title":"Text (Weiß)","class":"u-color--white"},{"title":"Textausrichtung links","class":"text-left","style":"text-align:left","tag":"p"},{"title":"Textausrichtung zentriert","class":"text-center","style":"text-align:center","tag":"p"},{"title":"Textausrichtung rechts","class":"text-right","style":"text-align:right","tag":"p"}]'
+xtype: textarea
+namespace: redactor
+area: Advanced

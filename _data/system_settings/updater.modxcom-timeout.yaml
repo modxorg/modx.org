@@ -1,0 +1,4 @@
+key: updater.modxcom_timeout
+value: '1000'
+namespace: updater
+area: Cache

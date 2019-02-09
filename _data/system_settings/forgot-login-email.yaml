@@ -1,0 +1,4 @@
+key: forgot_login_email
+value: "<p>Hallo,</p>\n<p>Sie haben ein neues Passwort für Ihren MODX Manager Account angefordert. Bitte klicken Sie auf den folgenden Aktivierungslink um Ihr neues Passwort zu aktivieren:</p>\n\n<p>\n    <strong>Aktivierungslink:</strong> [[+url_scheme]][[+http_host]][[+manager_url]]?modahsh=[[+hash]]<br />\n    <strong>Benutzername:</strong> [[+username]]<br />\n    <strong>Passwort:</strong> [[+password]]<br />\n</p>\n\n<p>Nachdem Sie sich im Manager angemeldet haben, können Sie Ihr Passwort selbstständig ändern.</p>\n\n<p>Sollten Sie diese E-Mail nicht angefordert haben, ignorieren Sie sie einfach.\n\n<p><small>Diese E-Mail wurde automatisch generiert.</small></p>"
+xtype: textarea
+area: authentication

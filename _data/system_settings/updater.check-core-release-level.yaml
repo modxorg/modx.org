@@ -1,0 +1,4 @@
+key: updater.check_core_release_level
+value: '3'
+namespace: updater
+area: '(5) Check Levels'

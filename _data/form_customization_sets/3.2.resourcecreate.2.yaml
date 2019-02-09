@@ -1,0 +1,6 @@
+id: 3
+profile: 2
+action: resource/create
+active: 1
+template: 2
+constraint_class: modResource

@@ -1,0 +1,4 @@
+key: contentblocks.image.upload_path
+value: images/
+namespace: contentblocks
+area: 'Input: Image'

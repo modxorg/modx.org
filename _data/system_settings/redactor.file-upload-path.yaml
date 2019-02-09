@@ -1,0 +1,4 @@
+key: redactor.file_upload_path
+value: files/
+namespace: redactor
+area: Media

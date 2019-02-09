@@ -1,0 +1,75 @@
+.contentblocks-exposed-fields-wrapper {
+  clear: both;
+  margin-top: 10px;
+  width: 100%;
+  /* new clearfix */
+  &:after {
+  	visibility: hidden;
+  	display: block;
+  	font-size: 0;
+  	content: " ";
+  	clear: both;
+  	height: 0;
+  	}
+  &.contentblocks-exposed-fields-as-setting-wrapper {
+    color: #999;
+    & label {
+      color: inherit;
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
+.contentblocks-options {
+  float: left;
+
+  label.value-label {
+    width:auto;
+    float: none;
+    line-height: 1.2;
+
+    .contentblocks-modal-field & {
+      line-height: 1.6;
+    }
+  }
+}
+
+.contentblocks-region-settings {
+  background: #fcfcfc;
+  border-bottom: 1px solid #CBCBCB;
+  padding: 10px 15px;
+}
+
+.contentblocks-setting-checkbox, .contentblocks-setting-radio {
+  label:hover {
+    cursor: pointer;
+  }
+}
+.contentblocks-setting-image {
+  position: relative;
+}
+.contentblocks-modal-layout-setting-richtext-container {
+  clear: both;
+}
+
+// Fix label alignments #535 thx Sebastian
+.contentblocks-field label, .contentblocks-field .label,
+.contentblocks-modal-field label, .contentblocks-modal-field .label,
+.contentblocks-exposed-fields-wrapper label, .contentblocks-exposed-fields-wrapper .label {
+  line-height: 1.35;
+  margin-top: 8px;
+  padding-right: 0.75em;
+  word-break: break-word;
+}
+
+.contentblocks-exposed-fields-wrapper.contentblocks-exposed-fields-as-setting-wrapper > label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contentblocks-exposed-fields-wrapper.contentblocks-exposed-fields-as-setting-wrapper label {
+ margin-bottom: 10px
+}
+.contentblocks-modal-layout-setting-richtext-container {
+  padding-top: 10px;
+}

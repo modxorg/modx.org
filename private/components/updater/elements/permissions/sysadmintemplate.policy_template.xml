@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policy_template>
+    <template_group>Admin</template_group>
+    <name>SysAdminTemplate</name>
+    <description>Permissions to perform system maintance tasks.</description>
+    <lexicon>permissions</lexicon>
+    <permissions>
+        <permission>
+            <name>system_perform_maintenance_tasks</name>
+            <description>The permission to perform maintenance tasks at all. This is the base permission for all maintenance tasks. Can be graduated by subsequent permissions for individual tasks.</description>
+            <value>1</value>
+        </permission>
+    </permissions>
+</policy_template>

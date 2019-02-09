@@ -1,0 +1,4 @@
+key: locker.flush_sessions_on_lock
+value: '1'
+xtype: combo-boolean
+namespace: locker

@@ -1,0 +1,4 @@
+key: filesluggy.word_delimiter
+value: '-'
+namespace: filesluggy
+area: fs_guid

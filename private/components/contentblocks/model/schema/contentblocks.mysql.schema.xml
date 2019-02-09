@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="contentblocks" baseClass="xPDOSimpleObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+    <object class="cbCategory" table="contentblocks_category">
+        <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
+        <field key="description" dbtype="varchar" precision="1024" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Fields" class="cbField" local="id" foreign="category" cardinality="one" owner="local" />
+        <aggregate alias="Layouts" class="cbLayout" local="id" foreign="category" cardinality="one" owner="local" />
+        <aggregate alias="Templates" class="cbTemplate" local="id" foreign="category" cardinality="one" owner="local" />
+    </object>
+
+    <object class="cbField" table="contentblocks_field">
+        <field key="parent" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+        <field key="parent_properties" dbtype="text" phptype="string" null="true" />
+
+        <field key="input" dbtype="varchar" precision="190" phptype="string" null="false" default="textfield" />
+        <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
+        <field key="description" dbtype="varchar" precision="1024" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />
+        <field key="category" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="icon_type" dbtype="varchar" precision="255" phptype="string" null="false" default="core" />
+
+        <field key="template" dbtype="text" phptype="string" null="false" />
+        <field key="properties" dbtype="text" phptype="string" null="true" />
+        <field key="availability" dbtype="text" phptype="string" null="true" />
+        <field key="layouts" dbtype="varchar" precision="255" phptype="string" null="true" />
+        <field key="times_per_layout" dbtype="int" precision="5" phptype="integer" null="true" default="0" />
+        <field key="times_per_page" dbtype="int" precision="5" phptype="integer" null="true" default="0" />
+        <field key="settings" dbtype="text" phptype="string" null="true" />
+
+        <index alias="input" name="input" primary="false" unique="false" type="BTREE">
+            <column key="input" length="" collation="A" null="false" />
+        </index>
+        <index alias="parent" name="parent" primary="false" unique="false" type="BTREE">
+            <column key="parent" length="" collation="A" null="false" />
+        </index>
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+        <index alias="category" name="category" primary="false" unique="false" type="BTREE">
+            <column key="category" length="" collation="A" null="false" />
+        </index>
+
+        <composite alias="Children" class="cbField" local="id" foreign="parent" cardinality="many" owner="local" />
+        <aggregate alias="Parent" class="cbField" local="parent" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Category" class="cbCategory" local="category" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cbLayout" table="contentblocks_layout">
+        <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
+        <field key="description" dbtype="varchar" precision="1024" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />
+        <field key="category" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="icon_type" dbtype="varchar" precision="255" phptype="string" null="false" default="core" />
+
+        <field key="columns" dbtype="text" phptype="string" null="false" />
+        <field key="template" dbtype="text" phptype="string" null="false" />
+        <field key="availability" dbtype="text" phptype="string" null="true" />
+        <field key="times_per_page" dbtype="int" precision="5" phptype="integer" null="true" />
+        <field key="layout_only_nested" dbtype="tinyint" precision="1" phptype="bool" null="true" default="false" />
+        <field key="settings" dbtype="text" phptype="string" null="true" />
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+        <index alias="category" name="category" primary="false" unique="false" type="BTREE">
+            <column key="category" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Category" class="cbCategory" local="category" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cbTemplate" table="contentblocks_template">
+        <field key="name" dbtype="varchar" precision="190" phptype="string" null="false" />
+        <field key="description" dbtype="varchar" precision="1024" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />
+        <field key="category" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+
+        <field key="icon" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+        <field key="icon_type" dbtype="varchar" precision="255" phptype="string" null="false" default="core"/>
+
+        <field key="content" dbtype="text" phptype="string" null="false" />
+        <field key="availability" dbtype="text" phptype="string" null="true" />
+
+        <index alias="name" name="name" primary="false" unique="false" type="BTREE">
+            <column key="name" length="" collation="A" null="false" />
+        </index>
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+        <index alias="category" name="category" primary="false" unique="false" type="BTREE">
+            <column key="category" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Category" class="cbCategory" local="category" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="cbDefault" table="contentblocks_default">
+        <field key="constraint_field" dbtype="varchar" precision="255" phptype="string" null="false" />
+        <field key="constraint_value" dbtype="varchar" precision="255" phptype="string" null="false" />
+        <field key="default_template" dbtype="varchar" precision="255" phptype="string" null="false" />
+        <field key="target_layout" dbtype="int" precision="15" phptype="integer" null="false" />
+        <field key="target_field" dbtype="int" precision="15" phptype="integer" null="true" />
+        <field key="target_column" dbtype="varchar" precision="100" phptype="string" null="true" />
+        <field key="sortorder" dbtype="int" precision="5" phptype="integer" null="false" default="0" />
+
+        <index alias="sortorder" name="sortorder" primary="false" unique="false" type="BTREE">
+            <column key="sortorder" length="" collation="A" null="false" />
+        </index>
+    </object>
+</model>
+

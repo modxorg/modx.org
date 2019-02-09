@@ -1,0 +1,24 @@
+.lead {
+    font-family: $lead-font-family;
+    font-weight: $lead-font-weight;
+    color: $lead-font-color;
+}
+
+// show href value when a tag has no text value (https://twitter.com/AllThingsSmitty/status/946381631836901377)
+a[href^="http"]:empty::before {
+    content: attr(href);
+}
+
+figure {
+    margin: 0 0 $global-margin;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+legend {
+    padding: rem(0 4);;
+    margin-left: rem(-4);
+}
