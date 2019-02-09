@@ -14,9 +14,10 @@ properties: 'a:0:{}'
             </a>
         </div>
         <div class="medium-9 cell">
-            <ul>
-                [[- get resources for menu... ]]
-            </ul>
+            [[pdoMenu?
+                &parents=`0`    
+                &level=`1`
+            ]]
         </div>
     </div>
 </header>
