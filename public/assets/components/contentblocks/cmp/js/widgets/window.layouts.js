@@ -108,9 +108,10 @@ ContentBlocksComponent.window.Layout = function(config) {
                     //fieldLabel: _('contentblocks.template'),
                     allowBlank: true,
                     anchor: '100%',
+                    height: 150,
                     grow: true,
                     growMin: 150,
-                    growMax: 300
+                    growMax: 500
                 }]
             },{
                 title: _('contentblocks.columns'),

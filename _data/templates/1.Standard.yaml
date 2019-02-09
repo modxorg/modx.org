@@ -9,7 +9,8 @@ properties: 'a:0:{}'
 <html class="no-js [[*context_key]]" lang="[[++cultureKey]]">
     [[$tpl.head]]
     <body itemscope itemtype="http://schema.org/WebPage" id="top">
-        <a href="#main" class="show-for-sr">Jump to main content</a>
+        [[$tpl.page-start]]
+        <a href="#main" class="show-for-sr">Zum Hauptinhalt springen</a>
         
         <div class="l-page-wrapper">
             [[$tpl.page-header]]

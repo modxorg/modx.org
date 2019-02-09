@@ -42,6 +42,8 @@
                 dom.find('.height').val('');
                 dom.find('.extension').val('');
                 dom.find('img.contentblocks-field-image-preview-img').attr('src', '');
+                input.cropData = data.crops = {};
+                input.cropPreviews.empty();
 
                 ContentBlocks.fixColumnHeights();
                 ContentBlocks.fireChange();
@@ -334,6 +336,7 @@
 
         input.openCropper = function(e, crop) {
             var imgData = $.extend(true, {}, data, input.getData());
+            console.log(imgData);
             crop = crop || false;
             var cropper = ContentBlocks.Cropper(imgData, {
                 configurations: data.properties.crops || '',
@@ -417,6 +420,8 @@
                 dom.find('.contentblocks-field-image-title-input').val('').removeClass('tinyrte-replaced');
                 dom.find('img.contentblocks-field-image-preview-img').attr('src', '');
                 dom.find('.tinyrte-container').remove();
+                input.cropData = data.crops = {};
+                input.cropPreviews.empty();
 
                 ContentBlocks.fixColumnHeights();
                 ContentBlocks.fireChange();

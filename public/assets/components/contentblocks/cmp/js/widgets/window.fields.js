@@ -138,7 +138,7 @@ Ext.extend(ContentBlocksComponent.window.Field, MODx.Window, {
                     }]
                 }]
             });
-        tabs.push({
+            tabs.push({
                 title: _('contentblocks.settings'),
                 id: config.id + '-settings',
                 items: [{
@@ -299,6 +299,7 @@ Ext.extend(ContentBlocksComponent.window.Field, MODx.Window, {
             description: _('contentblocks.' + input.getValue() + '_template.description') || undefined,
             allowBlank: true,
             anchor: '100%',
+            height: 75,
             grow: true,
             growMin: 75,
             growMax: 400,
@@ -391,8 +392,10 @@ Ext.extend(ContentBlocksComponent.window.Field, MODx.Window, {
                 case 'code': // This is separate as it can use Ace
                     prop.xtype = Ext.ComponentMgr.isRegistered('modx-texteditor') ? 'modx-texteditor' : 'textarea';
                     prop.mimeType = 'text/html';
+                    prop.height = prop.height ? prop.height : 75;
                     prop.grow = prop.grow ? prop.grow : true;
                     prop.growMin = prop.growMin ? prop.growMin : 75;
+                    prop.growMax = prop.growMax ? prop.growMax : 400;
                     break;
 
                 case 'fieldgroup':

@@ -73,6 +73,8 @@
                 // Enter
                 // Add a new list item at this level.
                 if (key == 13) {
+                    // Prevent a "submit" event from happening
+                    e.preventDefault();
                     input.addItem($this.closest('ul'), {}, true, $list.index());
                 }
                 // Backspace

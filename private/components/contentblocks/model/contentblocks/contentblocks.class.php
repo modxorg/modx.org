@@ -97,7 +97,7 @@ class ContentBlocks extends Alpacka {
     public function __construct($instance, array $config = array())
     {
         parent::__construct($instance, $config);
-        $this->setVersion(1, 8, 5, 'pl');
+        $this->setVersion(1, 8, 7, 'pl');
 
         /**
          * @deprecated
@@ -409,6 +409,11 @@ class ContentBlocks extends Alpacka {
                 $columns = $globalPhs;
                 $layoutSettings = [];
 
+                // Add the layout title into the column placeholders
+                $layoutTitle = array_key_exists('title', $layout) ? $layout['title'] : '';
+                $columns['layout_title'] = $layoutTitle;
+                $columns['title'] = $layoutTitle;
+
                 // Process layout settings
                 $tmpLayout = isset($layouts[$layout['layout']]) ? $layouts[$layout['layout']] : array();
                 if (isset($tmpLayout['settings']) && !empty($tmpLayout['settings'])) {
@@ -423,11 +428,6 @@ class ContentBlocks extends Alpacka {
                         $columns[$id] = $value;
                         $layoutSettings[$id] = $value;
                     }
-                }
-
-                // Add the title if set
-                if (array_key_exists('title', $layout)) {
-                    $columns['title'] = $layout['title'];
                 }
 
                 foreach ($layout['content'] as $column => $fields) {

@@ -70,7 +70,7 @@ class ImageInput extends cbBaseInput {
                 'key' => 'file_types',
                 'fieldLabel' => $this->modx->lexicon('contentblocks.file_types'),
                 'xtype' => 'textfield',
-                'default' => 'png,gif,jpg,jpeg',
+                'default' => 'png,gif,jpg,jpeg,svg',
                 'description' => $this->modx->lexicon('contentblocks.file_types.description')
             ),
             array(

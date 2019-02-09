@@ -1,3 +1,21 @@
+ContentBlocks 1.8.7-pl
+----------------------
+Released on 2019-02-08
+
+- Add svg to the default accepted file types on the image input
+- Fix the layout title not being set since 1.8.6 [S19368]
+- Fix issues with templates being invisible with Ace installed and ace.grow enabled [S19331]
+- Fix hitting enter in a list causing gallery items to be removed [#546]
+- Integrate new minimum requirement checks per https://www.modmore.com/blog/2019/minimum-php-requirements/
+
+ContentBlocks 1.8.6-pl
+----------------------
+Released on 2019-01-23
+
+- The built-in layout title (click the layout name in the canvas) is now available in both [[+title]] and [[+layout_title]] placeholders
+- When you have a layout setting with key "title", your layout setting now overrides the built-in layout title [S19264]
+- Fix crops not being unset when removing an image from an image input [#542]
+
 ContentBlocks 1.8.5-pl
 ----------------------
 Released on 2019-01-08

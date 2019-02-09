@@ -1,0 +1,9 @@
+id: 2
+username: roel
+password: $2y$10$8f3yESkcpP/0jWF/txA5Fe9zki7zYX9DilH8ZWTKIW0t/Hdk3gLIK
+cachepwd: $2y$10$O83IlX55yxFDhGr8dap1v.V4aLE8.7zdmlQxcxdax4bmOB4K4/YUa
+remote_key: null
+remote_data: null
+hash_class: hashing.modPBKDF2
+salt: e24d596c8baf90836da915cf5a540cbf
+primary_group: 1

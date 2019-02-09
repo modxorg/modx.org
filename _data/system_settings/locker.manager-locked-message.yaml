@@ -1,3 +1,0 @@
-key: locker.manager_locked_message
-value: '<div class="locker" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: rgba(255,255,255,0.75); padding: 16px; text-align: center; font-weight: bold; font-size: 16px; display: flex; align-items: center;"><p>Der Login ist zur Zeit aufgrund von Wartungsarbeiten gesperrt. Bitte versuchen Sie es später noch einmal oder wenden Sie sich an Ihren technischen Ansprechpartner.</p></div>'
-namespace: locker
